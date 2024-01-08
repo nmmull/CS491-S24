@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-08 Mon 11:34 -->
+<!-- 2024-01-08 Mon 16:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CAS CS 491</title>
@@ -21,7 +21,7 @@
 This course is an introduction to basic concepts in type theory and
 mechanized proof as they relate to programming languages, formal
 verification, mathematics, and philosophy. The connections between
-logic and computing are incredibly deep, this course will only able
+logic and computing are incredibly deep, this course will only be able
 to cover a (biased) selection of rudiments, but the goal is to provide
 students (you) with the tools to:
 </p>
@@ -35,8 +35,8 @@ and soundness) which are core to their utility;</li>
 type-checking and type-inference;</li>
 <li>formalize non-trivial mathematical theorems and properties of
 programs using the Lean theorem prover;</li>
-<li>prepare for graduate-level courses in formal methods and
-programming languages based on type theory (e.g., CAS CS 599 D1 and G1)</li>
+<li>prepare for graduate-level courses in formal methods and programming
+languages (e.g., CAS CS 599 D1 and G1)</li>
 <li>think critically about the fundamental question: <i>what is a proof?</i>
 Does a proof need to be human readable? Does it need to be human
 <i>understandable</i>? Does it need to have computational content (e.g.,
@@ -44,32 +44,44 @@ if you prove there exists an 𝑋 with some property, do you need to
 provide a way to construct such an 𝑋?)</li>
 </ul>
 <p>
-⟪ Prerequesites ⟫ CS131, CS330, CS320 (CS332 is recommended but not required)
+<b>Prerequesites:</b> CS131, CS330, CS320 (CS332 is recommended but not required)
 </p>
 
 <p>
 For more details, see the <a href="index.html">syllabus</a> for this course.
 </p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb2aff09">Important Links</a></li>
+<li><a href="#org6bbe931">Schedule</a></li>
+<li><a href="#org9f1c767">Syllabus</a></li>
+<li><a href="#orgd46e347">Log</a></li>
+</ul>
+</div>
+</div>
+
 <div id="outline-container-orgb2aff09" class="outline-2">
 <h2 id="orgb2aff09">Important Links</h2>
 <div class="outline-text-2" id="text-orgb2aff09">
-</div>
 <ul class="org-ul">
-<li><a id="orgc7a69b1"></a><a href="schedule.html">Full Schedule</a><br /></li>
-<li><a id="org65c61f5"></a>Piazza<br /></li>
-<li><a id="org7c4607f"></a>Gradescope<br /></li>
-<li><a id="orgdfb2830"></a>Office Hours Calendar<br /></li>
-<li><a id="org34cfe50"></a>Programming:<br />
+<li>Piazza</li>
+<li>Gradescope</li>
+<li>Office Hours Calendar</li>
+<li>Material</li>
+<li>Programming:
 <ul class="org-ul">
-<li><a id="org9549f56"></a><a href="https://lean-lang.org">Lean</a><br /></li>
-<li><a id="orgc1a7c68"></a><a href="https://docs.racket-lang.org/pie/">The Pie Reference</a><br /></li>
-</ul>
-</li>
+<li><a href="//lean-lang.org">Lean</a></li>
+<li><a href="https://docs.racket-lang.org/pie/">The Pie Reference</a></li>
+</ul></li>
 </ul>
 </div>
-<div id="outline-container-orgcb652e9" class="outline-2">
-<h2 id="orgcb652e9">Schedule (Overview)</h2>
-<div class="outline-text-2" id="text-orgcb652e9">
+</div>
+<div id="outline-container-org6bbe931" class="outline-2">
+<h2 id="org6bbe931">Schedule</h2>
+<div class="outline-text-2" id="text-org6bbe931">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -89,15 +101,15 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 </thead>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-01">01-22</a></td>
-<td class="org-left">What is this course?</td>
+<td class="org-left">01-22</td>
+<td class="org-left"><a href="#course-intro">What is this course?</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-02">01-24</a></td>
-<td class="org-left">Induction and Recursion</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">01-24</td>
+<td class="org-left"><a href="#ind-rec">Induction and Recursion</a></td>
+<td class="org-left">HW01 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -108,9 +120,9 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-04">01-31</a></td>
+<td class="org-left">02-01</td>
 <td class="org-left">Functional Programming in Lean (Part 2)</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW01 due, HW02 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -123,7 +135,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-06">02-07</a></td>
 <td class="org-left">Satisfiability and Resolution (SAT)</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW02 due, HW03 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -136,7 +148,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-08">02-14</a></td>
 <td class="org-left">Satsifability Modulo Theories (SMT)</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW03 due, HW04 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -149,7 +161,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-10">02-21</a></td>
 <td class="org-left">Kripke Models</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW04 due, HW05 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -162,7 +174,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-12">02-28</a></td>
 <td class="org-left">Quantifiers</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW05 due, HW06 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -175,7 +187,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-14">03-06</a></td>
 <td class="org-left">Theorem Proving in Lean (Part 2)</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW06 due</td>
 </tr>
 </tbody>
 <tbody>
@@ -195,7 +207,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-16">03-20</a></td>
 <td class="org-left">Introduction to Type Theory: Simple Types</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW07 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -208,7 +220,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-18">03-27</a></td>
 <td class="org-left">Type Inference</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW07 due, HW08 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -221,7 +233,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-20">04-03</a></td>
 <td class="org-left">Dependent Type Theory</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW08 due, HW09 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -234,7 +246,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-22">04-10</a></td>
 <td class="org-left">Meta-Theory and the Lambda Cube</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW09 due, HW10 out</td>
 </tr>
 </tbody>
 <tbody>
@@ -247,7 +259,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left"><a href="schedule.html#lecture-24">04-17</a></td>
 <td class="org-left">Real World Mechanized Proving</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">HW10 due</td>
 </tr>
 </tbody>
 <tbody>
@@ -273,11 +285,24 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 <tr>
 <td class="org-left">05-01</td>
 <td class="org-left">TBD</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Final Project Due</td>
 </tr>
 </tbody>
 </table>
 </div>
+<div id="outline-container-course-intro" class="outline-3">
+<h3 id="course-intro">What is this course?</h3>
+<div class="outline-text-3" id="text-course-intro">
+</div>
+</div>
+<div id="outline-container-ind-rec" class="outline-3">
+<h3 id="ind-rec">Induction and Recursion</h3>
+<div class="outline-text-3" id="text-ind-rec">
+</div>
+</div>
+</div>
+<div id="outline-container-org9f1c767" class="outline-2">
+<h2 id="org9f1c767">Syllabus</h2>
 </div>
 <div id="outline-container-orgd46e347" class="outline-2">
 <h2 id="orgd46e347">Log</h2>
