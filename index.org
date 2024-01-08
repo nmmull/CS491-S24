@@ -1,0 +1,86 @@
+#+title: CAS CS 491
+#+subtitle: Type Theory and Mechanized Reasoning@@html:<br>@@
+#+subtitle: Boston University@@html:<br>@@
+#+subtitle: Spring 2024
+This course is an introduction to basic concepts in type theory and
+mechanized proof as they relate to programming languages, formal
+verification, mathematics, and philosophy. The connections between
+logic and computing are incredibly deep, this course will only able
+to cover a (biased) selection of rudiments, but the goal is to provide
+students (you) with the tools to:
++ construct formal proofs and typing derivations for a variety of
+  logics and type theories which undergird systems used for large-scale
+  verification tasks;
++ prove meta-theoretic properties of type theories (like normalization
+  and soundness) which are core to their utility;
++ implement fundamental algorithms for type theories like
+  type-checking and type-inference;
++ formalize non-trivial mathematical theorems and properties of
+  programs using the Lean theorem prover;
++ prepare for graduate-level courses in formal methods and
+  programming languages based on type theory (e.g., CAS CS 599 D1 and G1)
++ think critically about the fundamental question: /what is a proof?/
+  Does a proof need to be human readable? Does it need to be human
+  /understandable/? Does it need to have computational content (e.g.,
+  if you prove there exists an 𝑋 with some property, do you need to
+  provide a way to construct such an 𝑋?)
+*Prerequesites:* CS131, CS330, CS320 (CS332 is recommended but not required)
+
+For more details, see the [[file:index.org][syllabus]] for this course.
+* Important Links
+** [[file:schedule.org][Full Schedule]]
+** Piazza
+** Gradescope
+** Office Hours Calendar
+** Programming:
+*** [[https://lean-lang.org][Lean]]
+*** [[https://docs.racket-lang.org/pie/][The Pie Reference]]
+* Schedule (Overview)
+|-------+--------------------------------------------+---------------------|
+| Date  | Topic                                      | Notes               |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-01][01-22]] | What is this course?                       |                     |
+| [[file:schedule.org::#lecture-02][01-24]] | Induction and Recursion                    |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-03][01-29]] | Functional Programming to Lean (Part 1)    |                     |
+| [[file:schedule.org::#lecture-04][01-31]] | Functional Programming in Lean (Part 2)    |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-05][02-05]] | Propositions and Proofs                    |                     |
+| [[file:schedule.org::#lecture-06][02-07]] | Satisfiability and Resolution (SAT)        |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-07][02-12]] | Theories and Models                        |                     |
+| [[file:schedule.org::#lecture-08][02-14]] | Satsifability Modulo Theories (SMT)        |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-09][02-19]] | Intuitionistic Propositional Logic         |                     |
+| [[file:schedule.org::#lecture-10][02-21]] | Kripke Models                              |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-11][02-26]] | The Curry-Howard Isomorphism (Take 1)      |                     |
+| [[file:schedule.org::#lecture-12][02-28]] | Quantifiers                                |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-13][03-04]] | Theorem Proving in Lean (Part 1)           |                     |
+| [[file:schedule.org::#lecture-14][03-06]] | Theorem Proving in Lean (Part 2)           |                     |
+|-------+--------------------------------------------+---------------------|
+|       | SPRING RECESS                              |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-15][03-18]] | The (Untyped) Lambda Calculus              |                     |
+| [[file:schedule.org::#lecture-16][03-20]] | Introduction to Type Theory: Simple Types  |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-17][03-25]] | Polymorphism and Type Constructors         |                     |
+| [[file:schedule.org::#lecture-18][03-27]] | Type Inference                             |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-19][04-01]] | Higher-Order Intuitionistic Logic          |                     |
+| [[file:schedule.org::#lecture-20][04-03]] | Dependent Type Theory                      |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-21][04-08]] | Curry-Howard Isomoprhism (Take 2)          |                     |
+| [[file:schedule.org::#lecture-22][04-10]] | Meta-Theory and the Lambda Cube            |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-23][04-15]] | NO CLASS                                   | Patriots’ Day       |
+| [[file:schedule.org::#lecture-24][04-17]] | Real World Mechanized Proving              |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org::#lecture-25][04-22]] | NO CLASS                                   | Ex. Credit Opp. TBA |
+| [[file:schedule.org::#lecture-26][04-24]] | Set-Theoretic and Type-Theoretic Paradoxes |                     |
+|-------+--------------------------------------------+---------------------|
+| [[file:schedule.org][04-29]] | TBD                                        |                     |
+| 05-01 | TBD                                        |                     |
+|-------+--------------------------------------------+---------------------|
+* Log
