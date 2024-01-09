@@ -29,9 +29,10 @@ students (you) with the tools to:
 + [[https://piazza.com/class/lr6hvcdfwl1il][Piazza]]
 + [[https://www.gradescope.com/courses/700611][Gradescope]]
 + [[https://github.com/nmmull/CS491-S24][Material]]
-+ Programming:
-  + [[Https://lean-lang.org][Lean]]
-  + [[https://docs.racket-lang.org/pie/][The Pie Reference]]
++ [[*Schedule]]
++ [[https://leanprover.github.io][Lean]]
++ Syllabus
++ [[*Log]]
 * Schedule
 |-------+-----------------------------+---------------------|
 |  Date | Topic                       | Notes               |
@@ -152,7 +153,7 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: type-inf
 :END:
-** Quantifiers and Higher-order logic
+** Quantifiers and higher-order logic
 :PROPERTIES:
 :CUSTOM_ID: hol
 :END:
@@ -168,15 +169,15 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: lambda-cube
 :END:
-** Advanced Topic: Real world mechanized proving
+** Advanced: Real world mechanized proving
 :PROPERTIES:
 :CUSTOM_ID: real-world
 :END:
-** Advanced Topic: Extensions of type theory
+** Advanced: Extensions of type theory
 :PROPERTIES:
 :CUSTOM_ID: extensions
 :END:
-** Advanced Topic: Set-theoretic and type-theoretic paradoxes
+** Advanced: Set-theoretic and type-theoretic paradoxes
 :PROPERTIES:
 :CUSTOM_ID: paradox
 :END:
