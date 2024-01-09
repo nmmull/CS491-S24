@@ -5,9 +5,8 @@
 #+options: H:2
 This course is an introduction to basic concepts in type theory and
 mechanized proof as they relate to programming languages, formal
-verification, mathematics, and philosophy. The connections between
-logic and computing are incredibly deep, this course will only be able
-to cover a (biased) selection of rudiments, but the goal is to provide
+verification, mathematics, and philosophy. We will only be able to
+cover a (biased) selection of rudiments, but the goal is to provide
 students (you) with the tools to:
 + construct formal proofs and typing derivations for a variety of
   logics and type theories which undergird systems used for large-scale
@@ -19,81 +18,166 @@ students (you) with the tools to:
 + formalize non-trivial mathematical theorems and properties of
   programs using the Lean theorem prover;
 + prepare for graduate-level courses in formal methods and programming
-  languages (e.g., CAS CS 599 D1 and G1)
+  languages;
 + think critically about the fundamental question: /what is a proof?/
   Does a proof need to be human readable? Does it need to be human
-  /understandable/? Does it need to have computational content (e.g.,
-  if you prove there exists an 𝑋 with some property, do you need to
-  provide a way to construct such an 𝑋?)
+  /understandable/? Does it need to be constructive? (What /is/ constructivity?)
+
 *Prerequesites:* CS131, CS330, CS320 (CS332 is recommended but not required)
 
-For more details, see the [[file:index.org][syllabus]] for this course.
-
-#+toc: headlines 1
-
-* Important Links
-+ Piazza
-+ Gradescope
-+ Office Hours Calendar
-+ Material
+* Links
++ [[https://piazza.com/class/lr6hvcdfwl1il][Piazza]]
++ [[https://www.gradescope.com/courses/700611][Gradescope]]
++ [[https://github.com/nmmull/CS491-S24][Material]]
 + Programming:
   + [[Https://lean-lang.org][Lean]]
   + [[https://docs.racket-lang.org/pie/][The Pie Reference]]
 * Schedule
-|-------+--------------------------------------------+---------------------|
-| Date  | Topic                                      | Notes               |
-|-------+--------------------------------------------+---------------------|
-| 01-22 | [[#course-intro]]                              |                     |
-| 01-24 | [[#ind-rec]]                                   | HW01 out            |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-03][01-29]] | Functional Programming to Lean (Part 1)    |                     |
-| 02-01 | Functional Programming in Lean (Part 2)    | HW01 due, HW02 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-05][02-05]] | Propositions and Proofs                    |                     |
-| [[file:schedule.org::#lecture-06][02-07]] | Satisfiability and Resolution (SAT)        | HW02 due, HW03 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-07][02-12]] | Theories and Models                        |                     |
-| [[file:schedule.org::#lecture-08][02-14]] | Satsifability Modulo Theories (SMT)        | HW03 due, HW04 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-09][02-19]] | Intuitionistic Propositional Logic         |                     |
-| [[file:schedule.org::#lecture-10][02-21]] | Kripke Models                              | HW04 due, HW05 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-11][02-26]] | The Curry-Howard Isomorphism (Take 1)      |                     |
-| [[file:schedule.org::#lecture-12][02-28]] | Quantifiers                                | HW05 due, HW06 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-13][03-04]] | Theorem Proving in Lean (Part 1)           |                     |
-| [[file:schedule.org::#lecture-14][03-06]] | Theorem Proving in Lean (Part 2)           | HW06 due            |
-|-------+--------------------------------------------+---------------------|
-|       | SPRING RECESS                              |                     |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-15][03-18]] | The (Untyped) Lambda Calculus              |                     |
-| [[file:schedule.org::#lecture-16][03-20]] | Introduction to Type Theory: Simple Types  | HW07 out            |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-17][03-25]] | Polymorphism and Type Constructors         |                     |
-| [[file:schedule.org::#lecture-18][03-27]] | Type Inference                             | HW07 due, HW08 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-19][04-01]] | Higher-Order Intuitionistic Logic          |                     |
-| [[file:schedule.org::#lecture-20][04-03]] | Dependent Type Theory                      | HW08 due, HW09 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-21][04-08]] | Curry-Howard Isomoprhism (Take 2)          |                     |
-| [[file:schedule.org::#lecture-22][04-10]] | Meta-Theory and the Lambda Cube            | HW09 due, HW10 out  |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-23][04-15]] | NO CLASS                                   | Patriots’ Day       |
-| [[file:schedule.org::#lecture-24][04-17]] | Real World Mechanized Proving              | HW10 due            |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org::#lecture-25][04-22]] | NO CLASS                                   | Ex. Credit Opp. TBA |
-| [[file:schedule.org::#lecture-26][04-24]] | Set-Theoretic and Type-Theoretic Paradoxes |                     |
-|-------+--------------------------------------------+---------------------|
-| [[file:schedule.org][04-29]] | TBD                                        |                     |
-| 05-01 | TBD                                        | Final Project Due   |
-|-------+--------------------------------------------+---------------------|
+|-------+-----------------------------+---------------------|
+|  Date | Topic                       | Notes               |
+|-------+-----------------------------+---------------------|
+| 01-22 | [[#course-intro]]               |                     |
+| 01-24 | [[#ind-rec]]                    | HW01 out            |
+|-------+-----------------------------+---------------------|
+| 01-29 | [[#lean-i]]                     |                     |
+| 02-01 | [[#lean-ii]]                    | HW01 due, HW02 out  |
+|-------+-----------------------------+---------------------|
+| 02-05 | [[#prop-logic]]                 |                     |
+| 02-07 | [[#sat]]                        | HW02 due, HW03 out  |
+|-------+-----------------------------+---------------------|
+| 02-12 | [[#theories]]                   |                     |
+| 02-14 | [[#smt]]                        | HW03 due, HW04 out  |
+|-------+-----------------------------+---------------------|
+| 02-19 | [[#int-prop-logic-i]]           |                     |
+| 02-21 | [[#int-prop-logic-ii]]          | HW04 due, HW05 out  |
+|-------+-----------------------------+---------------------|
+| 02-26 | [[#lambda-i]]                   |                     |
+| 02-28 | [[#lambda-ii]]                  | HW05 due, HW06 out  |
+|-------+-----------------------------+---------------------|
+| 03-04 | [[#simple-types-i]]             |                     |
+| 03-06 | [[#simple-types-ii]]            | HW06 due            |
+|-------+-----------------------------+---------------------|
+|       | SPRING RECESS               |                     |
+|-------+-----------------------------+---------------------|
+| 03-18 | [[#lean-iii]]                   |                     |
+| 03-20 | [[#lean-iv]]                    | HW07 out            |
+|-------+-----------------------------+---------------------|
+| 03-25 | [[#poly]]                       |                     |
+| 03-27 | [[#type-inf]]                   | HW07 due, HW08 out  |
+|-------+-----------------------------+---------------------|
+| 04-01 | [[#hol]]                        |                     |
+| 04-03 | [[#dtt]]                        | HW08 due, HW09 out  |
+|-------+-----------------------------+---------------------|
+| 04-08 | [[#lambda-cube]]                |                     |
+| 04-10 | [[#curry-howard]]               | HW09 due, HW10 out  |
+|-------+-----------------------------+---------------------|
+| 04-15 | NO CLASS                    | Patriots’ Day       |
+| 04-17 | [[#real-world]]                 | HW10 due            |
+|-------+-----------------------------+---------------------|
+| 04-22 | NO CLASS                    | Ex. Credit Opp. TBA |
+| 04-24 | [[#extensions]]                 |                     |
+|-------+-----------------------------+---------------------|
+| 04-29 | [[#paradox]]                    |                     |
+| 05-01 | Final Project Presentations |                     |
+|-------+-----------------------------+---------------------|
 ** What is this course?
 :PROPERTIES:
 :CUSTOM_ID: course-intro
 :END:
-** Induction and Recursion
+** Induction and recursion
 :PROPERTIES:
 :CUSTOM_ID: ind-rec
 :END:
-* Syllabus
+** Lean I
+:PROPERTIES:
+:CUSTOM_ID: lean-i
+:END:
+** Lean II
+:PROPERTIES:
+:CUSTOM_ID: lean-ii
+:END:
+** Propositional logic
+:PROPERTIES:
+:CUSTOM_ID: prop-logic
+:END:
+** Satisfiability and resolution (SAT)
+:PROPERTIES:
+:CUSTOM_ID: sat
+:END:
+** Theories and models
+:PROPERTIES:
+:CUSTOM_ID: theories
+:END:
+** Satisfiability modulo theories (SMT)
+:PROPERTIES:
+:CUSTOM_ID: smt
+:END:
+** Intuitionistic propositional logic I
+:PROPERTIES:
+:CUSTOM_ID: int-prop-logic-i
+:END:
+** Intuitionistic propositional logic II
+:PROPERTIES:
+:CUSTOM_ID: int-prop-logic-ii
+:END:
+** The lambda calculus I
+:PROPERTIES:
+:CUSTOM_ID: lambda-i
+:END:
+** The lambda calculus II
+:PROPERTIES:
+:CUSTOM_ID: lambda-ii
+:END:
+** Simple types I
+:PROPERTIES:
+:CUSTOM_ID: simple-types-i
+:END:
+** Simple types II
+:PROPERTIES:
+:CUSTOM_ID: simple-types-ii
+:END:
+** Lean III
+:PROPERTIES:
+:CUSTOM_ID: lean-iii
+:END:
+** Lean IV
+:PROPERTIES:
+:CUSTOM_ID: lean-iv
+:END:
+** Polymorphism
+:PROPERTIES:
+:CUSTOM_ID: poly
+:END:
+** Type inference
+:PROPERTIES:
+:CUSTOM_ID: type-inf
+:END:
+** Quantifiers and Higher-order logic
+:PROPERTIES:
+:CUSTOM_ID: hol
+:END:
+** Dependent type theory
+:PROPERTIES:
+:CUSTOM_ID: dtt
+:END:
+** The Curry-Howard isomorphism
+:PROPERTIES:
+:CUSTOM_ID: curry-howard
+:END:
+** The lambda cube
+:PROPERTIES:
+:CUSTOM_ID: lambda-cube
+:END:
+** Advanced Topic: Real world mechanized proving
+:PROPERTIES:
+:CUSTOM_ID: real-world
+:END:
+** Advanced Topic: Extensions of type theory
+:PROPERTIES:
+:CUSTOM_ID: extensions
+:END:
+** Advanced Topic: Set-theoretic and type-theoretic paradoxes
+:PROPERTIES:
+:CUSTOM_ID: paradox
+:END:
 * Log

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-08 Mon 16:02 -->
+<!-- 2024-01-09 Tue 10:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CAS CS 491</title>
@@ -20,9 +20,8 @@
 <p>
 This course is an introduction to basic concepts in type theory and
 mechanized proof as they relate to programming languages, formal
-verification, mathematics, and philosophy. The connections between
-logic and computing are incredibly deep, this course will only be able
-to cover a (biased) selection of rudiments, but the goal is to provide
+verification, mathematics, and philosophy. We will only be able to
+cover a (biased) selection of rudiments, but the goal is to provide
 students (you) with the tools to:
 </p>
 <ul class="org-ul">
@@ -36,41 +35,23 @@ type-checking and type-inference;</li>
 <li>formalize non-trivial mathematical theorems and properties of
 programs using the Lean theorem prover;</li>
 <li>prepare for graduate-level courses in formal methods and programming
-languages (e.g., CAS CS 599 D1 and G1)</li>
+languages;</li>
 <li>think critically about the fundamental question: <i>what is a proof?</i>
 Does a proof need to be human readable? Does it need to be human
-<i>understandable</i>? Does it need to have computational content (e.g.,
-if you prove there exists an 𝑋 with some property, do you need to
-provide a way to construct such an 𝑋?)</li>
+<i>understandable</i>? Does it need to be constructive? (What <i>is</i> constructivity?)</li>
 </ul>
+
 <p>
 <b>Prerequesites:</b> CS131, CS330, CS320 (CS332 is recommended but not required)
 </p>
 
-<p>
-For more details, see the <a href="index.html">syllabus</a> for this course.
-</p>
-
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgb2aff09">Important Links</a></li>
-<li><a href="#org6bbe931">Schedule</a></li>
-<li><a href="#org9f1c767">Syllabus</a></li>
-<li><a href="#orgd46e347">Log</a></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgb2aff09" class="outline-2">
-<h2 id="orgb2aff09">Important Links</h2>
-<div class="outline-text-2" id="text-orgb2aff09">
+<div id="outline-container-org7f24318" class="outline-2">
+<h2 id="org7f24318">Links</h2>
+<div class="outline-text-2" id="text-org7f24318">
 <ul class="org-ul">
-<li>Piazza</li>
-<li>Gradescope</li>
-<li>Office Hours Calendar</li>
-<li>Material</li>
+<li><a href="https://piazza.com/class/lr6hvcdfwl1il">Piazza</a></li>
+<li><a href="https://www.gradescope.com/courses/700611">Gradescope</a></li>
+<li><a href="https://github.com/nmmull/CS491-S24">Material</a></li>
 <li>Programming:
 <ul class="org-ul">
 <li><a href="//lean-lang.org">Lean</a></li>
@@ -86,7 +67,7 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 
 
 <colgroup>
-<col  class="org-left" />
+<col  class="org-right" />
 
 <col  class="org-left" />
 
@@ -94,198 +75,198 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">Date</th>
+<th scope="col" class="org-right">Date</th>
 <th scope="col" class="org-left">Topic</th>
 <th scope="col" class="org-left">Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">01-22</td>
+<td class="org-right">01-22</td>
 <td class="org-left"><a href="#course-intro">What is this course?</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">01-24</td>
-<td class="org-left"><a href="#ind-rec">Induction and Recursion</a></td>
+<td class="org-right">01-24</td>
+<td class="org-left"><a href="#ind-rec">Induction and recursion</a></td>
 <td class="org-left">HW01 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-03">01-29</a></td>
-<td class="org-left">Functional Programming to Lean (Part 1)</td>
+<td class="org-right">01-29</td>
+<td class="org-left"><a href="#lean-i">Lean I</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">02-01</td>
-<td class="org-left">Functional Programming in Lean (Part 2)</td>
+<td class="org-right">02-01</td>
+<td class="org-left"><a href="#lean-ii">Lean II</a></td>
 <td class="org-left">HW01 due, HW02 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-05">02-05</a></td>
-<td class="org-left">Propositions and Proofs</td>
+<td class="org-right">02-05</td>
+<td class="org-left"><a href="#prop-logic">Propositional logic</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-06">02-07</a></td>
-<td class="org-left">Satisfiability and Resolution (SAT)</td>
+<td class="org-right">02-07</td>
+<td class="org-left"><a href="#sat">Satisfiability and resolution (SAT)</a></td>
 <td class="org-left">HW02 due, HW03 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-07">02-12</a></td>
-<td class="org-left">Theories and Models</td>
+<td class="org-right">02-12</td>
+<td class="org-left"><a href="#theories">Theories and models</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-08">02-14</a></td>
-<td class="org-left">Satsifability Modulo Theories (SMT)</td>
+<td class="org-right">02-14</td>
+<td class="org-left"><a href="#smt">Satisfiability modulo theories (SMT)</a></td>
 <td class="org-left">HW03 due, HW04 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-09">02-19</a></td>
-<td class="org-left">Intuitionistic Propositional Logic</td>
+<td class="org-right">02-19</td>
+<td class="org-left"><a href="#int-prop-logic-i">Intuitionistic propositional logic I</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-10">02-21</a></td>
-<td class="org-left">Kripke Models</td>
+<td class="org-right">02-21</td>
+<td class="org-left"><a href="#int-prop-logic-ii">Intuitionistic propositional logic II</a></td>
 <td class="org-left">HW04 due, HW05 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-11">02-26</a></td>
-<td class="org-left">The Curry-Howard Isomorphism (Take 1)</td>
+<td class="org-right">02-26</td>
+<td class="org-left"><a href="#lambda-i">The lambda calculus I</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-12">02-28</a></td>
-<td class="org-left">Quantifiers</td>
+<td class="org-right">02-28</td>
+<td class="org-left"><a href="#lambda-ii">The lambda calculus II</a></td>
 <td class="org-left">HW05 due, HW06 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-13">03-04</a></td>
-<td class="org-left">Theorem Proving in Lean (Part 1)</td>
+<td class="org-right">03-04</td>
+<td class="org-left"><a href="#simple-types-i">Simple types I</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-14">03-06</a></td>
-<td class="org-left">Theorem Proving in Lean (Part 2)</td>
+<td class="org-right">03-06</td>
+<td class="org-left"><a href="#simple-types-ii">Simple types II</a></td>
 <td class="org-left">HW06 due</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
 <td class="org-left">SPRING RECESS</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-15">03-18</a></td>
-<td class="org-left">The (Untyped) Lambda Calculus</td>
+<td class="org-right">03-18</td>
+<td class="org-left"><a href="#lean-iii">Lean III</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-16">03-20</a></td>
-<td class="org-left">Introduction to Type Theory: Simple Types</td>
+<td class="org-right">03-20</td>
+<td class="org-left"><a href="#lean-iv">Lean IV</a></td>
 <td class="org-left">HW07 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-17">03-25</a></td>
-<td class="org-left">Polymorphism and Type Constructors</td>
+<td class="org-right">03-25</td>
+<td class="org-left"><a href="#poly">Polymorphism</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-18">03-27</a></td>
-<td class="org-left">Type Inference</td>
+<td class="org-right">03-27</td>
+<td class="org-left"><a href="#type-inf">Type inference</a></td>
 <td class="org-left">HW07 due, HW08 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-19">04-01</a></td>
-<td class="org-left">Higher-Order Intuitionistic Logic</td>
+<td class="org-right">04-01</td>
+<td class="org-left"><a href="#hol">Quantifiers and Higher-order logic</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-20">04-03</a></td>
-<td class="org-left">Dependent Type Theory</td>
+<td class="org-right">04-03</td>
+<td class="org-left"><a href="#dtt">Dependent type theory</a></td>
 <td class="org-left">HW08 due, HW09 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-21">04-08</a></td>
-<td class="org-left">Curry-Howard Isomoprhism (Take 2)</td>
+<td class="org-right">04-08</td>
+<td class="org-left"><a href="#lambda-cube">The lambda cube</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-22">04-10</a></td>
-<td class="org-left">Meta-Theory and the Lambda Cube</td>
+<td class="org-right">04-10</td>
+<td class="org-left"><a href="#curry-howard">The Curry-Howard isomorphism</a></td>
 <td class="org-left">HW09 due, HW10 out</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-23">04-15</a></td>
+<td class="org-right">04-15</td>
 <td class="org-left">NO CLASS</td>
 <td class="org-left">Patriots’ Day</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-24">04-17</a></td>
-<td class="org-left">Real World Mechanized Proving</td>
+<td class="org-right">04-17</td>
+<td class="org-left"><a href="#real-world">Advanced Topic: Real world mechanized proving</a></td>
 <td class="org-left">HW10 due</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-25">04-22</a></td>
+<td class="org-right">04-22</td>
 <td class="org-left">NO CLASS</td>
 <td class="org-left">Ex. Credit Opp. TBA</td>
 </tr>
 
 <tr>
-<td class="org-left"><a href="schedule.html#lecture-26">04-24</a></td>
-<td class="org-left">Set-Theoretic and Type-Theoretic Paradoxes</td>
+<td class="org-right">04-24</td>
+<td class="org-left"><a href="#extensions">Advanced Topic: Extensions of type theory</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 <tbody>
 <tr>
-<td class="org-left"><a href="schedule.html">04-29</a></td>
-<td class="org-left">TBD</td>
+<td class="org-right">04-29</td>
+<td class="org-left"><a href="#paradox">Advanced Topic: Set-theoretic and type-theoretic paradoxes</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">05-01</td>
-<td class="org-left">TBD</td>
-<td class="org-left">Final Project Due</td>
+<td class="org-right">05-01</td>
+<td class="org-left">Final Project Presentations</td>
+<td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 </table>
@@ -296,13 +277,125 @@ For more details, see the <a href="index.html">syllabus</a> for this course.
 </div>
 </div>
 <div id="outline-container-ind-rec" class="outline-3">
-<h3 id="ind-rec">Induction and Recursion</h3>
+<h3 id="ind-rec">Induction and recursion</h3>
 <div class="outline-text-3" id="text-ind-rec">
 </div>
 </div>
+<div id="outline-container-lean-i" class="outline-3">
+<h3 id="lean-i">Lean I</h3>
+<div class="outline-text-3" id="text-lean-i">
 </div>
-<div id="outline-container-org9f1c767" class="outline-2">
-<h2 id="org9f1c767">Syllabus</h2>
+</div>
+<div id="outline-container-lean-ii" class="outline-3">
+<h3 id="lean-ii">Lean II</h3>
+<div class="outline-text-3" id="text-lean-ii">
+</div>
+</div>
+<div id="outline-container-prop-logic" class="outline-3">
+<h3 id="prop-logic">Propositional logic</h3>
+<div class="outline-text-3" id="text-prop-logic">
+</div>
+</div>
+<div id="outline-container-sat" class="outline-3">
+<h3 id="sat">Satisfiability and resolution (SAT)</h3>
+<div class="outline-text-3" id="text-sat">
+</div>
+</div>
+<div id="outline-container-theories" class="outline-3">
+<h3 id="theories">Theories and models</h3>
+<div class="outline-text-3" id="text-theories">
+</div>
+</div>
+<div id="outline-container-smt" class="outline-3">
+<h3 id="smt">Satisfiability modulo theories (SMT)</h3>
+<div class="outline-text-3" id="text-smt">
+</div>
+</div>
+<div id="outline-container-int-prop-logic-i" class="outline-3">
+<h3 id="int-prop-logic-i">Intuitionistic propositional logic I</h3>
+<div class="outline-text-3" id="text-int-prop-logic-i">
+</div>
+</div>
+<div id="outline-container-int-prop-logic-ii" class="outline-3">
+<h3 id="int-prop-logic-ii">Intuitionistic propositional logic II</h3>
+<div class="outline-text-3" id="text-int-prop-logic-ii">
+</div>
+</div>
+<div id="outline-container-lambda-i" class="outline-3">
+<h3 id="lambda-i">The lambda calculus I</h3>
+<div class="outline-text-3" id="text-lambda-i">
+</div>
+</div>
+<div id="outline-container-lambda-ii" class="outline-3">
+<h3 id="lambda-ii">The lambda calculus II</h3>
+<div class="outline-text-3" id="text-lambda-ii">
+</div>
+</div>
+<div id="outline-container-simple-types-i" class="outline-3">
+<h3 id="simple-types-i">Simple types I</h3>
+<div class="outline-text-3" id="text-simple-types-i">
+</div>
+</div>
+<div id="outline-container-simple-types-ii" class="outline-3">
+<h3 id="simple-types-ii">Simple types II</h3>
+<div class="outline-text-3" id="text-simple-types-ii">
+</div>
+</div>
+<div id="outline-container-lean-iii" class="outline-3">
+<h3 id="lean-iii">Lean III</h3>
+<div class="outline-text-3" id="text-lean-iii">
+</div>
+</div>
+<div id="outline-container-lean-iv" class="outline-3">
+<h3 id="lean-iv">Lean IV</h3>
+<div class="outline-text-3" id="text-lean-iv">
+</div>
+</div>
+<div id="outline-container-poly" class="outline-3">
+<h3 id="poly">Polymorphism</h3>
+<div class="outline-text-3" id="text-poly">
+</div>
+</div>
+<div id="outline-container-type-inf" class="outline-3">
+<h3 id="type-inf">Type inference</h3>
+<div class="outline-text-3" id="text-type-inf">
+</div>
+</div>
+<div id="outline-container-hol" class="outline-3">
+<h3 id="hol">Quantifiers and Higher-order logic</h3>
+<div class="outline-text-3" id="text-hol">
+</div>
+</div>
+<div id="outline-container-dtt" class="outline-3">
+<h3 id="dtt">Dependent type theory</h3>
+<div class="outline-text-3" id="text-dtt">
+</div>
+</div>
+<div id="outline-container-curry-howard" class="outline-3">
+<h3 id="curry-howard">The Curry-Howard isomorphism</h3>
+<div class="outline-text-3" id="text-curry-howard">
+</div>
+</div>
+<div id="outline-container-lambda-cube" class="outline-3">
+<h3 id="lambda-cube">The lambda cube</h3>
+<div class="outline-text-3" id="text-lambda-cube">
+</div>
+</div>
+<div id="outline-container-real-world" class="outline-3">
+<h3 id="real-world">Advanced Topic: Real world mechanized proving</h3>
+<div class="outline-text-3" id="text-real-world">
+</div>
+</div>
+<div id="outline-container-extensions" class="outline-3">
+<h3 id="extensions">Advanced Topic: Extensions of type theory</h3>
+<div class="outline-text-3" id="text-extensions">
+</div>
+</div>
+<div id="outline-container-paradox" class="outline-3">
+<h3 id="paradox">Advanced Topic: Set-theoretic and type-theoretic paradoxes</h3>
+<div class="outline-text-3" id="text-paradox">
+</div>
+</div>
 </div>
 <div id="outline-container-orgd46e347" class="outline-2">
 <h2 id="orgd46e347">Log</h2>
