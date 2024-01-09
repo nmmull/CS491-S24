@@ -177,7 +177,7 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: extensions
 :END:
-** Advanced: Set-theoretic and type-theoretic paradoxes
+** Advanced: Type-theoretic paradoxes
 :PROPERTIES:
 :CUSTOM_ID: paradox
 :END:
