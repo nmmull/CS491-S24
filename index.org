@@ -26,13 +26,19 @@ students (you) with the tools to:
 *Prerequesites:* CS131, CS330, CS320 (CS332 is recommended but not required)
 
 * Links
++ [[file:Notes/syllabus.pdf][Syllabus]]
 + [[https://piazza.com/class/lr6hvcdfwl1il][Piazza]]
 + [[https://www.gradescope.com/courses/700611][Gradescope]]
-+ [[https://github.com/nmmull/CS491-S24][Material]]
-+ [[*Schedule]]
-+ [[https://leanprover.github.io][Lean]]
-+ Syllabus
-+ [[*Log]]
++ [[https://github.com/nmmull/CS491-S24][Course Repository]]
++ [[*Schedule][Schedule]]
++ [[*Topics][Topics]]
++ Resources:
+  + [[https://lean-lang.org][Lean: Programming Language and Theorem Prover]]
+  + [[https://avigad.github.io/lamr/#][Logic and Mechanized Reasoning (LAMR)]]
+  + [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][Type Theory and Functional Programming (TTFF)]]
+  + [[https://lean-lang.org/functional_programming_in_lean/][Functional Programming in Lean (FPL)]]
+  + [[https://lean-lang.org/theorem_proving_in_lean4/][Theorem Proving in Lean 4 (TPL4)]]
++ [[*Log][Log]]
 * Schedule
 |-------+-----------------------------+---------------------|
 |  Date | Topic                       | Notes               |
@@ -81,6 +87,7 @@ students (you) with the tools to:
 | 04-29 | [[#paradox]]                    |                     |
 | 05-01 | Final Project Presentations |                     |
 |-------+-----------------------------+---------------------|
+* Topics
 ** What is this course?
 :PROPERTIES:
 :CUSTOM_ID: course-intro
