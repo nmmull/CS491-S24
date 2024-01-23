@@ -92,6 +92,14 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: course-intro
 :END:
+*** Outline:
++ give a rough outline of the topics of the course
++ discuss the role of mechanized reasoning in computer science and
+  mathematics
++ look breifly at the Curry-Howard isomorphism
+*** Reading:
+**** [[https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/][Quanta Article about Lean and the Curry-Howard isomorphism]]
+**** [[https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/][Nature Article about the Liquid Tensor Project]]
 ** Induction and recursion
 :PROPERTIES:
 :CUSTOM_ID: ind-rec
