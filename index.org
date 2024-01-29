@@ -16,7 +16,7 @@ students (you) with the tools to:
 + implement fundamental algorithms for type theories like
   type-checking and type-inference;
 + formalize non-trivial mathematical theorems and properties of
-  programs using the Lean theorem prover;
+  programs using Agda;
 + prepare for graduate-level courses in formal methods and programming
   languages;
 + think critically about the fundamental question: /what is a proof?/
@@ -33,53 +33,51 @@ students (you) with the tools to:
 + [[*Schedule][Schedule]]
 + [[*Topics][Topics]]
 + Resources:
-  + [[https://lean-lang.org][Lean: Programming Language and Theorem Prover]]
+  + [[https://wiki.portal.chalmers.se/agda/pmwiki.php][The Agda Wiki]]
   + [[https://avigad.github.io/lamr/#][Logic and Mechanized Reasoning (LAMR)]]
   + [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][Type Theory and Functional Programming (TTFF)]]
-  + [[https://lean-lang.org/functional_programming_in_lean/][Functional Programming in Lean (FPL)]]
-  + [[https://lean-lang.org/theorem_proving_in_lean4/][Theorem Proving in Lean 4 (TPL4)]]
 + [[*Log][Log]]
 * Schedule
 |-------+-----------------------------+---------------------|
 |  Date | Topic                       | Notes               |
 |-------+-----------------------------+---------------------|
 | 01-22 | [[#course-intro]]               |                     |
-| 01-24 | [[#ind-rec]]                    | HW01 out            |
+| 01-24 | [[#ind-rec]]                    | HW00 out            |
 |-------+-----------------------------+---------------------|
 | 01-29 | [[#lean-i]]                     |                     |
-| 02-01 | [[#lean-ii]]                    | HW01 due, HW02 out  |
+| 02-01 | [[#lean-ii]]                    | HW01 out            |
 |-------+-----------------------------+---------------------|
 | 02-05 | [[#prop-logic]]                 |                     |
-| 02-07 | [[#sat]]                        | HW02 due, HW03 out  |
+| 02-07 | [[#sat]]                        | HW01 due, HW02 out  |
 |-------+-----------------------------+---------------------|
 | 02-12 | [[#theories]]                   |                     |
-| 02-14 | [[#smt]]                        | HW03 due, HW04 out  |
+| 02-14 | [[#smt]]                        | HW02 due, HW03 out  |
 |-------+-----------------------------+---------------------|
 | 02-19 | [[#int-prop-logic-i]]           |                     |
-| 02-21 | [[#int-prop-logic-ii]]          | HW04 due, HW05 out  |
+| 02-21 | [[#int-prop-logic-ii]]          | HW03 due, HW04 out  |
 |-------+-----------------------------+---------------------|
 | 02-26 | [[#lambda-i]]                   |                     |
-| 02-28 | [[#lambda-ii]]                  | HW05 due, HW06 out  |
+| 02-28 | [[#lambda-ii]]                  | HW04 due, HW05 out  |
 |-------+-----------------------------+---------------------|
 | 03-04 | [[#simple-types-i]]             |                     |
-| 03-06 | [[#simple-types-ii]]            | HW06 due            |
+| 03-06 | [[#simple-types-ii]]            | HW05 due            |
 |-------+-----------------------------+---------------------|
 |       | SPRING RECESS               |                     |
 |-------+-----------------------------+---------------------|
 | 03-18 | [[#lean-iii]]                   |                     |
-| 03-20 | [[#lean-iv]]                    | HW07 out            |
+| 03-20 | [[#lean-iv]]                    | HW06 out            |
 |-------+-----------------------------+---------------------|
 | 03-25 | [[#poly]]                       |                     |
-| 03-27 | [[#type-inf]]                   | HW07 due, HW08 out  |
+| 03-27 | [[#type-inf]]                   | HW06 due, HW07 out  |
 |-------+-----------------------------+---------------------|
 | 04-01 | [[#hol]]                        |                     |
-| 04-03 | [[#dtt]]                        | HW08 due, HW09 out  |
+| 04-03 | [[#dtt]]                        | HW07 due, HW08 out  |
 |-------+-----------------------------+---------------------|
 | 04-08 | [[#lambda-cube]]                |                     |
-| 04-10 | [[#curry-howard]]               | HW09 due, HW10 out  |
+| 04-10 | [[#curry-howard]]               | HW08 due, HW09 out  |
 |-------+-----------------------------+---------------------|
 | 04-15 | NO CLASS                    | Patriots’ Day       |
-| 04-17 | [[#real-world]]                 | HW10 due            |
+| 04-17 | [[#real-world]]                 | HW09 due            |
 |-------+-----------------------------+---------------------|
 | 04-22 | NO CLASS                    | Ex. Credit Opp. TBA |
 | 04-24 | [[#extensions]]                 |                     |
@@ -117,11 +115,17 @@ students (you) with the tools to:
 ***** [[https://yforster.github.io/files/talk-chocola-synthetic-computability.pdf][Synthetic Computability (Yannick Forster)]]
 ***** [[https://mathweb.ucsd.edu/~sbuss/ResearchWeb/BAthesis/Buss_Thesis_OCR.pdf][Bounded Arithmetic (Sam Buss)]]
 ***** [[https://en.wikipedia.org/wiki/Transfinite_induction][Transfinite Induction (Wikipedia)]]
-** Lean I
+** Agda I: Introduction
 :PROPERTIES:
 :CUSTOM_ID: lean-i
 :END:
-** Lean II
++ Summary:
+  + examine at Agda as a function programming language, especially as
+    compared to OCaml (the language of CAS CS 320)
+  + start looking at dependent types and what we can do with them
++ Reading:
+  + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][Programming and Proving in Agda (PPA) 1: An introduction to Agda]]
+** Agda II
 :PROPERTIES:
 :CUSTOM_ID: lean-ii
 :END:
@@ -165,11 +169,11 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: simple-types-ii
 :END:
-** Lean III
+** Agda III
 :PROPERTIES:
 :CUSTOM_ID: lean-iii
 :END:
-** Lean IV
+** Agda IV
 :PROPERTIES:
 :CUSTOM_ID: lean-iv
 :END:
