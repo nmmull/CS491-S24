@@ -125,10 +125,17 @@ students (you) with the tools to:
   + start looking at dependent types and what we can do with them
 + Reading:
   + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][Programming and Proving in Agda (PPA) 1: An introduction to Agda]]
-** Agda II
+** Agda II: Dependent Types
 :PROPERTIES:
 :CUSTOM_ID: lean-ii
 :END:
+*** Summary
++ play with dependent types, with the goal of seeing some of their
+  strangeness, not necessarily understanding how they work
++ start to think about how dependent types can be used to represent
+  "properties" and how that might be useful for mechanized reasoning
+*** Reading:
++ PPA 2: Dependent Types
 ** Propositional logic
 :PROPERTIES:
 :CUSTOM_ID: prop-logic
