@@ -115,7 +115,7 @@ students (you) with the tools to:
 ***** [[https://yforster.github.io/files/talk-chocola-synthetic-computability.pdf][Synthetic Computability (Yannick Forster)]]
 ***** [[https://mathweb.ucsd.edu/~sbuss/ResearchWeb/BAthesis/Buss_Thesis_OCR.pdf][Bounded Arithmetic (Sam Buss)]]
 ***** [[https://en.wikipedia.org/wiki/Transfinite_induction][Transfinite Induction (Wikipedia)]]
-** Agda I: Introduction
+** Agda I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: lean-i
 :END:
@@ -129,17 +129,27 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: lean-ii
 :END:
-*** Summary
+*** Summary:
 + play with dependent types, with the goal of seeing some of their
   strangeness, not necessarily understanding how they work
 + start to think about how dependent types can be used to represent
   "properties" and how that might be useful for mechanized reasoning
 *** Reading:
 + PPA 2: Dependent Types
-** Propositional logic
+** Propositional logic I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: prop-logic
 :END:
+*** Summary:
++ discuss in more detail the standard workflow of Agda
++ introduce the syntax and semantics of propositional logic (as well
+  as what exactly these terms mean)
++ see how we can use agda as a framework for implementing
+  propositional logic
+*** Reading:
+**** [[https://nmmull.gitbook.io/cmsc-10500/notes/logic][A Primer on Propositional Logic]]
+**** [[http://intrologic.stanford.edu/chapters/chapter_02.html][Propositional Logic]]
+**** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
 ** Satisfiability and resolution (SAT)
 :PROPERTIES:
 :CUSTOM_ID: sat

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-02-01 Thu 17:32 -->
+<!-- 2024-02-06 Tue 14:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CAS CS 491</title>
@@ -101,7 +101,7 @@ Does a proof need to be human readable? Does it need to be human
 <tbody>
 <tr>
 <td class="org-right">01-29</td>
-<td class="org-left"><a href="#lean-i">Agda I: Introduction</a></td>
+<td class="org-left"><a href="#lean-i">Agda I: An Introduction</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
@@ -114,7 +114,7 @@ Does a proof need to be human readable? Does it need to be human
 <tbody>
 <tr>
 <td class="org-right">02-05</td>
-<td class="org-left"><a href="#prop-logic">Propositional logic</a></td>
+<td class="org-left"><a href="#prop-logic">Propositional logic I: An Introduction</a></td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
@@ -286,8 +286,8 @@ Does a proof need to be human readable? Does it need to be human
 <div class="outline-text-3" id="text-course-intro">
 </div>
 <ul class="org-ul">
-<li><a id="org3602fc0"></a>Summary:<br />
-<div class="outline-text-4" id="text-org3602fc0">
+<li><a id="orgc22df8d"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgc22df8d">
 <ul class="org-ul">
 <li>give a rough outline of the topics of the course</li>
 <li>discuss the role of mechanized reasoning in computer science and
@@ -296,7 +296,7 @@ mathematics</li>
 </ul>
 </div>
 </li>
-<li><a id="org4d780f7"></a>Reading:<br />
+<li><a id="orgd5e56cc"></a>Reading:<br />
 <ul class="org-ul">
 <li><a id="orga49551c"></a><a href="https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/">The Deep Link Equating Math Proofs and Computer Programs (Quanta)</a><br /></li>
 <li><a id="orgae6fd79"></a><a href="https://www.nature.com/articles/d41586-021-01627-2">Mathematicians welcome computer-assisted proof in ‘grand unification’ theory (Nature)</a><br /></li>
@@ -309,8 +309,8 @@ mathematics</li>
 <div class="outline-text-3" id="text-ind-rec">
 </div>
 <ul class="org-ul">
-<li><a id="orgc5c6547"></a>Summary:<br />
-<div class="outline-text-4" id="text-orgc5c6547">
+<li><a id="org740c836"></a>Summary:<br />
+<div class="outline-text-4" id="text-org740c836">
 <ul class="org-ul">
 <li>review induction over natural numbers and extend this to induction
 over inductively-defined sets</li>
@@ -321,7 +321,7 @@ towards how these will relate in Lean</li>
 </ul>
 </div>
 </li>
-<li><a id="org6e4ad37"></a>Reading:<br />
+<li><a id="orgec7a810"></a>Reading:<br />
 <ul class="org-ul">
 <li><a id="org36aed09"></a><a href="https://avigad.github.io/lamr/mathematical_background.html">LAMR 2: Mathematical Background</a><br /></li>
 <li><a id="org586d163"></a>Advance:<br />
@@ -336,7 +336,7 @@ towards how these will relate in Lean</li>
 </ul>
 </div>
 <div id="outline-container-lean-i" class="outline-3">
-<h3 id="lean-i">Agda I: Introduction</h3>
+<h3 id="lean-i">Agda I: An Introduction</h3>
 <div class="outline-text-3" id="text-lean-i">
 <ul class="org-ul">
 <li>Summary:
@@ -357,8 +357,8 @@ compared to OCaml (the language of CAS CS 320)</li>
 <div class="outline-text-3" id="text-lean-ii">
 </div>
 <ul class="org-ul">
-<li><a id="orged380e4"></a>Summary<br />
-<div class="outline-text-4" id="text-orged380e4">
+<li><a id="org8c8dd70"></a>Summary:<br />
+<div class="outline-text-4" id="text-org8c8dd70">
 <ul class="org-ul">
 <li>play with dependent types, with the goal of seeing some of their
 strangeness, not necessarily understanding how they work</li>
@@ -367,8 +367,8 @@ strangeness, not necessarily understanding how they work</li>
 </ul>
 </div>
 </li>
-<li><a id="org593012f"></a>Reading:<br />
-<div class="outline-text-4" id="text-org593012f">
+<li><a id="orgc30800c"></a>Reading:<br />
+<div class="outline-text-4" id="text-orgc30800c">
 <ul class="org-ul">
 <li>PPA 2: Dependent Types</li>
 </ul>
@@ -377,9 +377,29 @@ strangeness, not necessarily understanding how they work</li>
 </ul>
 </div>
 <div id="outline-container-prop-logic" class="outline-3">
-<h3 id="prop-logic">Propositional logic</h3>
+<h3 id="prop-logic">Propositional logic I: An Introduction</h3>
 <div class="outline-text-3" id="text-prop-logic">
 </div>
+<ul class="org-ul">
+<li><a id="org9b84260"></a>Summary:<br />
+<div class="outline-text-4" id="text-org9b84260">
+<ul class="org-ul">
+<li>discuss in more detail the standard workflow of Agda</li>
+<li>introduce the syntax and semantics of propositional logic (as well
+as what exactly these terms mean)</li>
+<li>see how we can use agda as a framework for implementing
+propositional logic</li>
+</ul>
+</div>
+</li>
+<li><a id="org30327ff"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org8e1dac5"></a><a href="https://nmmull.gitbook.io/cmsc-10500/notes/logic">A Primer on Propositional Logic</a><br /></li>
+<li><a id="org2275fe6"></a><a href="http://intrologic.stanford.edu/chapters/chapter_02.html">Propositional Logic</a><br /></li>
+<li><a id="org6e2e931"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+</ul>
+</li>
+</ul>
 </div>
 <div id="outline-container-sat" class="outline-3">
 <h3 id="sat">Satisfiability and resolution (SAT)</h3>
