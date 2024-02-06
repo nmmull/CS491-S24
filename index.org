@@ -1,4 +1,4 @@
-#+title: CAS CS 491
+#+title: CAS CS 400
 #+subtitle: Type Theory and Mechanized Reasoning@@html:<br>@@
 #+subtitle: Boston University@@html:<br>@@
 #+subtitle: Spring 2024
