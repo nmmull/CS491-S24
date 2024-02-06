@@ -48,13 +48,13 @@ students (you) with the tools to:
 | 02-01 | [[#lean-ii]]                    | HW01 out            |
 |-------+-----------------------------+---------------------|
 | 02-05 | [[#prop-logic]]                 |                     |
-| 02-07 | [[#sat]]                        | HW01 due, HW02 out  |
+| 02-07 | [[#prop-logic-ii]]              | HW01 due, HW02 out  |
 |-------+-----------------------------+---------------------|
-| 02-12 | [[#theories]]                   |                     |
-| 02-14 | [[#smt]]                        | HW02 due, HW03 out  |
+| 02-12 | [[#sat]]                        |                     |
+| 02-14 | [[#theories]]                   | HW02 due, HW03 out  |
 |-------+-----------------------------+---------------------|
+| 02-21 | [[#smt]]                        | HW03 due, HW04 out  |
 | 02-19 | [[#int-prop-logic-i]]           |                     |
-| 02-21 | [[#int-prop-logic-ii]]          | HW03 due, HW04 out  |
 |-------+-----------------------------+---------------------|
 | 02-26 | [[#lambda-i]]                   |                     |
 | 02-28 | [[#lambda-ii]]                  | HW04 due, HW05 out  |
@@ -98,7 +98,7 @@ students (you) with the tools to:
 *** Reading:
 **** [[https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/][The Deep Link Equating Math Proofs and Computer Programs (Quanta)]]
 **** [[https://www.nature.com/articles/d41586-021-01627-2][Mathematicians welcome computer-assisted proof in ‘grand unification’ theory (Nature)]]
-** Induction and recursion
+** Induction and Recursion
 :PROPERTIES:
 :CUSTOM_ID: ind-rec
 :END:
@@ -136,7 +136,7 @@ students (you) with the tools to:
   "properties" and how that might be useful for mechanized reasoning
 *** Reading:
 + PPA 2: Dependent Types
-** Propositional logic I: An Introduction
+** Propositional Logic I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: prop-logic
 :END:
@@ -150,25 +150,25 @@ students (you) with the tools to:
 **** [[https://nmmull.gitbook.io/cmsc-10500/notes/logic][A Primer on Propositional Logic]]
 **** [[http://intrologic.stanford.edu/chapters/chapter_02.html][Propositional Logic]]
 **** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
-** Satisfiability and resolution (SAT)
+** Propositional Logic II: Meta-Theory
+:PROPERTIES:
+:CUSTOM_ID: prop-logic-ii
+:END:
+** Propositional Logic III: Resolution and SAT
 :PROPERTIES:
 :CUSTOM_ID: sat
 :END:
-** Theories and models
+** Predicate Logic I: Theories and Models
 :PROPERTIES:
 :CUSTOM_ID: theories
 :END:
-** Satisfiability modulo theories (SMT)
+** Predicate Logic II: SAT Modulo Theories (SMT)
 :PROPERTIES:
 :CUSTOM_ID: smt
 :END:
-** Intuitionistic propositional logic I
+** Intuitionistic Propositional Logic
 :PROPERTIES:
 :CUSTOM_ID: int-prop-logic-i
-:END:
-** Intuitionistic propositional logic II
-:PROPERTIES:
-:CUSTOM_ID: int-prop-logic-ii
 :END:
 ** The lambda calculus I
 :PROPERTIES:
