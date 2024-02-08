@@ -14,4 +14,6 @@ filter p (x ∷ xs)    | true  = x ∷ filter p xs
 filter p (x ∷ xs)    | false = filter p xs
 
 split : {A : Set} → {n : ℕ} → Vec A n → Fin n → List A × List A
-split v = {!   !}
+split v zero = [] , toList v
+split (x ∷ xs) (suc n) with split xs n
+... | l , r = x ∷ l , r

@@ -154,6 +154,13 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: prop-logic-ii
 :END:
+*** Summary:
++ Dive deeper into pattern matching in Agda, introducing
+  with-abstraction for pattern matching on intermediate computations
++ Introduce semantic notions in logic, partiularly up to the notion of
+  logical equivalence
+*** Reading:
+**** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
 ** Propositional Logic III: Resolution and SAT
 :PROPERTIES:
 :CUSTOM_ID: sat

@@ -12,4 +12,12 @@ data Form : Set where
 
 -- replaces "a → b" with "¬a ∨ b" recursively throughout a formula
 replace-implies : Form → Form
-replace-implies = {!!}
+replace-implies (var x) = (var x)
+replace-implies (not f) = not (replace-implies f)        -- e.g., ¬ (A → B)
+replace-implies (and f g) = and (replace-implies f) (replace-implies g)
+replace-implies (or f g) = or (replace-implies f) (replace-implies g)
+replace-implies (implies f g) = or (not (replace-implies f)) (replace-implies g)
+
+example : Form  {-   P → (Q → W)   -}
+example = implies (var "P") (implies (var "Q") (var "W"))
+
