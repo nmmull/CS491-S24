@@ -19,5 +19,5 @@ module Split where
 
 open import CS400-Lib
 
-split : {A : Set} -> {n : Nat} -> Vec A n -> (i : Fin n) -> (Vec A (toNat i)) * (Vec A (n - toNat i))
+split : {A : Set} -> {n : Nat} -> Vec A n -> (i : Fin n) -> (Vec A (toNat i)) & (Vec A (n - toNat i))
 split = {!!}
