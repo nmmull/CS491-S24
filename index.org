@@ -161,10 +161,17 @@ students (you) with the tools to:
   logical equivalence
 *** Reading:
 **** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
-** Propositional Logic III: Resolution and SAT
+** Propositional Logic III: SAT Solvers
 :PROPERTIES:
 :CUSTOM_ID: sat
 :END:
+*** Summary:
++ Finish discussing semantics notions in propositional logic
++ Talk about functional completeness and normal forms
++ Introduce SAT solvers and the DPLL procedure
+*** Reading:
++ [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule][LAMR 6.2: Unit Propogation and the Pure Literal Rule]]
++ [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#dpll][LAMR 6.3: DPLL]]
 ** Predicate Logic I: Theories and Models
 :PROPERTIES:
 :CUSTOM_ID: theories
