@@ -23,8 +23,7 @@ students (you) with the tools to:
   Does a proof need to be human readable? Does it need to be human
   /understandable/? Does it need to be constructive? (What /is/ constructivity?)
 
-*Prerequesites:* CS131, CS330, CS320 (CS332 is recommended but not required)
-
+*Prerequisites:* CS131, CS330, CS320 (CS332 is recommended but not required)
 * Links
 + [[file:Notes/syllabus.pdf][Syllabus]]
 + [[https://piazza.com/class/lr6hvcdfwl1il][Piazza]]
@@ -50,11 +49,11 @@ students (you) with the tools to:
 | 02-05 | [[#prop-logic]]                 |                     |
 | 02-07 | [[#prop-logic-ii]]              | HW01 due, HW02 out  |
 |-------+-----------------------------+---------------------|
-| 02-12 | [[#sat]]                        |                     |
-| 02-14 | [[#theories]]                   | HW02 due, HW03 out  |
+| 02-12 | [[#sat-i]]                      |                     |
+| 02-14 | [[#sat-ii]]                     | HW02 due, HW03 out  |
 |-------+-----------------------------+---------------------|
-| 02-21 | [[#smt]]                        | HW03 due, HW04 out  |
-| 02-19 | [[#int-prop-logic-i]]           |                     |
+| 02-19 | NO CLASS                    | Presidents’ Day     |
+| 02-21 | [[#prop-proof]]                 | HW03 due, HW04 out  |
 |-------+-----------------------------+---------------------|
 | 02-26 | [[#lambda-i]]                   |                     |
 | 02-28 | [[#lambda-ii]]                  | HW04 due, HW05 out  |
@@ -94,7 +93,7 @@ students (you) with the tools to:
 + give a rough outline of the topics of the course
 + discuss the role of mechanized reasoning in computer science and
   mathematics
-+ look breifly at the Curry-Howard isomorphism
++ look briefly at the Curry-Howard isomorphism
 *** Reading:
 **** [[https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/][The Deep Link Equating Math Proofs and Computer Programs (Quanta)]]
 **** [[https://www.nature.com/articles/d41586-021-01627-2][Mathematicians welcome computer-assisted proof in ‘grand unification’ theory (Nature)]]
@@ -144,7 +143,7 @@ students (you) with the tools to:
 + discuss in more detail the standard workflow of Agda
 + introduce the syntax and semantics of propositional logic (as well
   as what exactly these terms mean)
-+ see how we can use agda as a framework for implementing
++ see how we can use Agda as a framework for implementing
   propositional logic
 *** Reading:
 **** [[https://nmmull.gitbook.io/cmsc-10500/notes/logic][A Primer on Propositional Logic]]
@@ -157,21 +156,34 @@ students (you) with the tools to:
 *** Summary:
 + Dive deeper into pattern matching in Agda, introducing
   with-abstraction for pattern matching on intermediate computations
-+ Introduce semantic notions in logic, partiularly up to the notion of
++ Introduce semantic notions in logic, particularly up to the notion of
   logical equivalence
 *** Reading:
 **** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
-** Propositional Logic III: SAT Solvers
+** SAT-Solvers I: An Introduction
 :PROPERTIES:
-:CUSTOM_ID: sat
+:CUSTOM_ID: sat-i
 :END:
 *** Summary:
 + Finish discussing semantics notions in propositional logic
 + Talk about functional completeness and normal forms
 + Introduce SAT solvers and the DPLL procedure
 *** Reading:
-+ [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule][LAMR 6.2: Unit Propogation and the Pure Literal Rule]]
++ [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule][LAMR 6.2: Unit Propagation and the Pure Literal Rule]]
 + [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#dpll][LAMR 6.3: DPLL]]
+** SAT-Solvers II: In Practice
+:PROPERTIES:
+:CUSTOM_ID: sat-ii
+:END:
+*** Summary:
++ Look at a couple encodings of propositions as CNF formulas
++ Look at an example application of SAT-solvers
+*** Reading:
++ [[https://avigad.github.io/lamr/using_sat_solvers.html#][LAMR 7: Using SAT Solvers]]
+** Propositional Proofs
+:PROPERTIES:
+:CUSTOM_ID: prop-proof
+:END:
 ** Predicate Logic I: Theories and Models
 :PROPERTIES:
 :CUSTOM_ID: theories
