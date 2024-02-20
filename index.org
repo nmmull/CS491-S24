@@ -26,16 +26,13 @@ students (you) with the tools to:
 *Prerequisites:* CS131, CS330, CS320 (CS332 is recommended but not required)
 * Links
 + [[file:Notes/syllabus.pdf][Syllabus]]
-+ [[https://piazza.com/class/lr6hvcdfwl1il][Piazza]]
 + [[https://www.gradescope.com/courses/700611][Gradescope]]
 + [[https://github.com/nmmull/CS491-S24][Course Repository]]
 + [[*Schedule][Schedule]]
-+ [[*Topics][Topics]]
 + Resources:
   + [[https://wiki.portal.chalmers.se/agda/pmwiki.php][The Agda Wiki]]
   + [[https://avigad.github.io/lamr/#][Logic and Mechanized Reasoning (LAMR)]]
   + [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][Type Theory and Functional Programming (TTFF)]]
-+ [[*Log][Log]]
 * Schedule
 |-------+-----------------------------+---------------------|
 |  Date | Topic                       | Notes               |
@@ -256,4 +253,3 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: paradox
 :END:
-* Log
