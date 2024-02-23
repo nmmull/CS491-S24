@@ -107,6 +107,7 @@ students (you) with the tools to:
 + discuss the connection between induction and recursion, with any eye
   towards how these will relate in Lean
 *** Reading:
+**** [[file:Notes/course-notes.pdf][TTMR 2: Induction and Recursion]]
 **** [[https://avigad.github.io/lamr/mathematical_background.html][LAMR 2: Mathematical Background]]
 **** Advance:
 ***** [[https://yforster.github.io/files/talk-chocola-synthetic-computability.pdf][Synthetic Computability (Yannick Forster)]]
@@ -132,7 +133,7 @@ students (you) with the tools to:
 + start to think about how dependent types can be used to represent
   "properties" and how that might be useful for mechanized reasoning
 *** Reading:
-+ PPA 2: Dependent Types
++ [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 2: Dependent Types]]
 ** Propositional Logic I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: prop-logic
@@ -144,6 +145,9 @@ students (you) with the tools to:
 + see how we can use Agda as a framework for implementing
   propositional logic
 *** Reading:
+**** [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
+***** 4.1: Syntax
+***** 4.2: Semantics
 **** [[https://nmmull.gitbook.io/cmsc-10500/notes/logic][A Primer on Propositional Logic]]
 **** [[http://intrologic.stanford.edu/chapters/chapter_02.html][Propositional Logic]]
 **** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
@@ -157,6 +161,9 @@ students (you) with the tools to:
 + Introduce semantic notions in logic, particularly up to the notion of
   logical equivalence
 *** Reading:
+**** [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
+***** 4.3: Meta-Theory
+***** 4.4: Functional Completeness
 **** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
 ** SAT-Solvers I: An Introduction
 :PROPERTIES:
@@ -167,6 +174,8 @@ students (you) with the tools to:
 + Talk about functional completeness and normal forms
 + Introduce SAT solvers and the DPLL procedure
 *** Reading:
++ [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
+  + 4.5: Conjunctive Normal Form
 + [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule][LAMR 6.2: Unit Propagation and the Pure Literal Rule]]
 + [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#dpll][LAMR 6.3: DPLL]]
 ** SAT-Solvers II: In Practice
