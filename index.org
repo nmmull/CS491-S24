@@ -28,6 +28,7 @@ students (you) with the tools to:
 + [[file:Notes/syllabus.pdf][Syllabus]]
 + [[https://www.gradescope.com/courses/700611][Gradescope]]
 + [[https://github.com/nmmull/CS491-S24][Course Repository]]
++ [[https://github.com/nmmull/CS400-Lib][Course Agda Library (CS400-Lib)]]
 + [[*Schedule][Schedule]]
 + Resources:
   + [[https://wiki.portal.chalmers.se/agda/pmwiki.php][The Agda Wiki]]
@@ -181,6 +182,13 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: prop-proof
 :END:
+*** Summary:
++ Define the notion of a proof system and a Gentzen-style sequent proof
++ Introduce resolution as an example of a proof system
++ Demonstrate the connection between resolution and DPLL.
+*** Reading:
++ [[https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution][LAMR 8.2: Resolution]]
++ [[https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution-and-dpll][LAMR 8.4: Resolution and DPLL]]
 ** Predicate Logic I: Theories and Models
 :PROPERTIES:
 :CUSTOM_ID: theories
