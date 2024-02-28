@@ -210,14 +210,29 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: int-prop-logic-i
 :END:
-** The lambda calculus I
+** The Lambda Calculus I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: lambda-i
 :END:
-** The lambda calculus II
+*** Summary:
++ Introduce the syntax and semantics of the lambda calculus.
+*** Reading:
++ TTFP 2: Functional Programming and Lambda-Calculi
+  + 2.2: The untyped lambda-calculus
+  + 2.3: Evaluation
+** The Lambda Calculus II: Meta-Theory
 :PROPERTIES:
 :CUSTOM_ID: lambda-ii
 :END:
+*** Summary:
++ Introduce semantic notions of the lambda calculus, including
+  normalization and evaluation strategies.
++ Look at how to encode data.
++ Talk breifly about De Bruijn indices and alpha equivalence.
+*** Reading:
++ TTFP 2: Functional Programming and Lambda-Calculi
+  + 2.4: Convertibility
+  + 2.5: Expressiveness
 ** Simple types I
 :PROPERTIES:
 :CUSTOM_ID: simple-types-i
