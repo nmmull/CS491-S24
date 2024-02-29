@@ -31,9 +31,12 @@ students (you) with the tools to:
 + [[https://github.com/nmmull/CS400-Lib][Course Agda Library (CS400-Lib)]]
 + [[*Schedule][Schedule]]
 + Resources:
-  + [[https://wiki.portal.chalmers.se/agda/pmwiki.php][The Agda Wiki]]
-  + [[https://avigad.github.io/lamr/#][Logic and Mechanized Reasoning (LAMR)]]
+  + [[file:Notes/course-notes.pdf][Type Theory and Mechanized Reasoning (TTMR)]]
+  + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][Programming and Proving in Agda (PPA)]]
   + [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][Type Theory and Functional Programming (TTFF)]]
+  + [[https://avigad.github.io/lamr/#][Logic and Mechanized Reasoning (LAMR)]]
+  + [[https://wiki.portal.chalmers.se/agda/pmwiki.php][The Agda Wiki]]
+  + [[https://pysathq.github.io][PySAT]]
 * Schedule
 |-------+-----------------------------+---------------------|
 |  Date | Topic                       | Notes               |
@@ -107,9 +110,10 @@ students (you) with the tools to:
 + discuss the connection between induction and recursion, with any eye
   towards how these will relate in Lean
 *** Reading:
-**** [[file:Notes/course-notes.pdf][TTMR 2: Induction and Recursion]]
-**** [[https://avigad.github.io/lamr/mathematical_background.html][LAMR 2: Mathematical Background]]
-**** Advance:
+**** Required:
+***** [[file:Notes/course-notes.pdf][TTMR 2: Induction and Recursion]]
+***** [[https://avigad.github.io/lamr/mathematical_background.html][LAMR 2: Mathematical Background]]
+**** Supplementary (Advanced):
 ***** [[https://yforster.github.io/files/talk-chocola-synthetic-computability.pdf][Synthetic Computability (Yannick Forster)]]
 ***** [[https://mathweb.ucsd.edu/~sbuss/ResearchWeb/BAthesis/Buss_Thesis_OCR.pdf][Bounded Arithmetic (Sam Buss)]]
 ***** [[https://en.wikipedia.org/wiki/Transfinite_induction][Transfinite Induction (Wikipedia)]]
@@ -122,7 +126,7 @@ students (you) with the tools to:
     compared to OCaml (the language of CAS CS 320)
   + start looking at dependent types and what we can do with them
 + Reading:
-  + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][Programming and Proving in Agda (PPA) 1: An introduction to Agda]]
+  + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 1: An introduction to Agda]]
 ** Agda II: Dependent Types
 :PROPERTIES:
 :CUSTOM_ID: lean-ii
@@ -145,37 +149,46 @@ students (you) with the tools to:
 + see how we can use Agda as a framework for implementing
   propositional logic
 *** Reading:
-**** [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
-***** 4.1: Syntax
-***** 4.2: Semantics
-**** [[https://nmmull.gitbook.io/cmsc-10500/notes/logic][A Primer on Propositional Logic]]
-**** [[http://intrologic.stanford.edu/chapters/chapter_02.html][Propositional Logic]]
-**** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
+**** Required:
+***** [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
+****** 4.1: Syntax
+****** 4.2: Semantics
+**** Supplementary:
+***** [[https://nmmull.gitbook.io/cmsc-10500/notes/logic][A Primer on Propositional Logic]]
+***** [[http://intrologic.stanford.edu/chapters/chapter_02.html][Propositional Logic]]
+***** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
 ** Propositional Logic II: Meta-Theory
 :PROPERTIES:
 :CUSTOM_ID: prop-logic-ii
 :END:
 *** Summary:
-+ Dive deeper into pattern matching in Agda, introducing
++ dive deeper into pattern matching in Agda, introducing
   with-abstraction for pattern matching on intermediate computations
-+ Introduce semantic notions in logic, particularly up to the notion of
++ introduce semantic notions in logic, particularly up to the notion of
   logical equivalence
 *** Reading:
-**** [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
-***** 4.3: Meta-Theory
-***** 4.4: Functional Completeness
-**** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
+**** Required:
+***** [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
+****** 4.3: Meta-Theory
+****** 4.4: Functional Completeness
+**** Supplementary:
+***** [[https://avigad.github.io/lamr/propositional_logic.html#][LAMR 4: Propositional Logic]]
 ** SAT-Solvers I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: sat-i
 :END:
 *** Summary:
-+ Finish discussing semantics notions in propositional logic
-+ Talk about functional completeness and normal forms
-+ Introduce SAT solvers and the DPLL procedure
++ finish discussing semantics notions in propositional logic
++ talk about functional completeness and normal forms
++ introduce SAT solvers and the DPLL procedure
 *** Reading:
+**** Required:
 + [[file:Notes/course-notes.pdf][TTMR 4: Classical Propositional Logic]]
   + 4.5: Conjunctive Normal Form
++ [[file:Notes/course-notes.pdf][TTMR 5: SAT Solvers]]
+  + 5.1: Restriction
+  + 5.2: DPLL
+**** Supplementary:
 + [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule][LAMR 6.2: Unit Propagation and the Pure Literal Rule]]
 + [[https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#dpll][LAMR 6.3: DPLL]]
 ** SAT-Solvers II: In Practice
@@ -183,41 +196,34 @@ students (you) with the tools to:
 :CUSTOM_ID: sat-ii
 :END:
 *** Summary:
-+ Look at a couple encodings of propositions as CNF formulas
-+ Look at an example application of SAT-solvers
++ look at a couple encodings of propositions as CNF formulas
++ look at an example application of SAT-solvers
 *** Reading:
+**** Required:
++ [[file:Notes/course-notes.pdf][TTMR 5: SAT Solvers]]
+  + 5.3 CNF Encodings
+  + 5.4 Example: Sudoku
+**** Supplementary:
 + [[https://avigad.github.io/lamr/using_sat_solvers.html#][LAMR 7: Using SAT Solvers]]
 ** Propositional Proofs
 :PROPERTIES:
 :CUSTOM_ID: prop-proof
 :END:
 *** Summary:
-+ Define the notion of a proof system and a Gentzen-style sequent proof
-+ Introduce resolution as an example of a proof system
-+ Demonstrate the connection between resolution and DPLL.
++ define the notion of a proof system and a Gentzen-style sequent proof
++ introduce resolution as an example of a proof system
++ demonstrate the connection between resolution and DPLL.
 *** Reading:
 + [[https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution][LAMR 8.2: Resolution]]
 + [[https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution-and-dpll][LAMR 8.4: Resolution and DPLL]]
-** Predicate Logic I: Theories and Models
-:PROPERTIES:
-:CUSTOM_ID: theories
-:END:
-** Predicate Logic II: SAT Modulo Theories (SMT)
-:PROPERTIES:
-:CUSTOM_ID: smt
-:END:
-** Intuitionistic Propositional Logic
-:PROPERTIES:
-:CUSTOM_ID: int-prop-logic-i
-:END:
 ** The Lambda Calculus I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: lambda-i
 :END:
 *** Summary:
-+ Introduce the syntax and semantics of the lambda calculus.
++ introduce the syntax and semantics of the lambda calculus.
 *** Reading:
-+ TTFP 2: Functional Programming and Lambda-Calculi
++ [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][TTFP 2: Functional Programming and Lambda-Calculi]]
   + 2.2: The untyped lambda-calculus
   + 2.3: Evaluation
 ** The Lambda Calculus II: Meta-Theory
@@ -225,12 +231,12 @@ students (you) with the tools to:
 :CUSTOM_ID: lambda-ii
 :END:
 *** Summary:
-+ Introduce semantic notions of the lambda calculus, including
++ introduce semantic notions of the lambda calculus, including
   normalization and evaluation strategies.
-+ Look at how to encode data.
-+ Talk breifly about De Bruijn indices and alpha equivalence.
++ look at how to encode data.
++ talk breifly about De Bruijn indices and alpha equivalence.
 *** Reading:
-+ TTFP 2: Functional Programming and Lambda-Calculi
++ [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][TTFP 2: Functional Programming and Lambda-Calculi]]
   + 2.4: Convertibility
   + 2.5: Expressiveness
 ** Simple types I
@@ -256,6 +262,18 @@ students (you) with the tools to:
 ** Type inference
 :PROPERTIES:
 :CUSTOM_ID: type-inf
+:END:
+** Predicate Logic I: Theories and Models
+:PROPERTIES:
+:CUSTOM_ID: theories
+:END:
+** Predicate Logic II: SAT Modulo Theories (SMT)
+:PROPERTIES:
+:CUSTOM_ID: smt
+:END:
+** Intuitionistic Propositional Logic
+:PROPERTIES:
+:CUSTOM_ID: int-prop-logic-i
 :END:
 ** Quantifiers and higher-order logic
 :PROPERTIES:

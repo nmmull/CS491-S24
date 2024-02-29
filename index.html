@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-02-28 Wed 10:22 -->
+<!-- 2024-02-29 Thu 13:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CAS CS 400</title>
@@ -55,9 +55,12 @@ Does a proof need to be human readable? Does it need to be human
 <li><a href="#org6bbe931">Schedule</a></li>
 <li>Resources:
 <ul class="org-ul">
-<li><a href="https://wiki.portal.chalmers.se/agda/pmwiki.php">The Agda Wiki</a></li>
-<li><a href="https://avigad.github.io/lamr/#">Logic and Mechanized Reasoning (LAMR)</a></li>
+<li><a href="Notes/course-notes.pdf">Type Theory and Mechanized Reasoning (TTMR)</a></li>
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">Programming and Proving in Agda (PPA)</a></li>
 <li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">Type Theory and Functional Programming (TTFF)</a></li>
+<li><a href="https://avigad.github.io/lamr/#">Logic and Mechanized Reasoning (LAMR)</a></li>
+<li><a href="https://wiki.portal.chalmers.se/agda/pmwiki.php">The Agda Wiki</a></li>
+<li><a href="https://pysathq.github.io">PySAT</a></li>
 </ul></li>
 </ul>
 </div>
@@ -283,8 +286,8 @@ Does a proof need to be human readable? Does it need to be human
 <div class="outline-text-3" id="text-course-intro">
 </div>
 <ul class="org-ul">
-<li><a id="org2c5a123"></a>Summary:<br />
-<div class="outline-text-4" id="text-org2c5a123">
+<li><a id="orge8c10ea"></a>Summary:<br />
+<div class="outline-text-4" id="text-orge8c10ea">
 <ul class="org-ul">
 <li>give a rough outline of the topics of the course</li>
 <li>discuss the role of mechanized reasoning in computer science and
@@ -293,7 +296,7 @@ mathematics</li>
 </ul>
 </div>
 </li>
-<li><a id="org2bc22a3"></a>Reading:<br />
+<li><a id="org5f23c9c"></a>Reading:<br />
 <ul class="org-ul">
 <li><a id="orga49551c"></a><a href="https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/">The Deep Link Equating Math Proofs and Computer Programs (Quanta)</a><br /></li>
 <li><a id="orgae6fd79"></a><a href="https://www.nature.com/articles/d41586-021-01627-2">Mathematicians welcome computer-assisted proof in ‘grand unification’ theory (Nature)</a><br /></li>
@@ -306,8 +309,8 @@ mathematics</li>
 <div class="outline-text-3" id="text-ind-rec">
 </div>
 <ul class="org-ul">
-<li><a id="orgd228594"></a>Summary:<br />
-<div class="outline-text-4" id="text-orgd228594">
+<li><a id="org51bea5f"></a>Summary:<br />
+<div class="outline-text-4" id="text-org51bea5f">
 <ul class="org-ul">
 <li>review induction over natural numbers and extend this to induction
 over inductively-defined sets</li>
@@ -318,11 +321,15 @@ towards how these will relate in Lean</li>
 </ul>
 </div>
 </li>
-<li><a id="orgf3ff9b1"></a>Reading:<br />
+<li><a id="org0f33764"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="orgdc11447"></a>Required:<br />
 <ul class="org-ul">
 <li><a id="org02a9b94"></a><a href="Notes/course-notes.pdf">TTMR 2: Induction and Recursion</a><br /></li>
 <li><a id="org36aed09"></a><a href="https://avigad.github.io/lamr/mathematical_background.html">LAMR 2: Mathematical Background</a><br /></li>
-<li><a id="org586d163"></a>Advance:<br />
+</ul>
+</li>
+<li><a id="orgd1b156e"></a>Supplementary (Advanced):<br />
 <ul class="org-ul">
 <li><a id="org98eeab7"></a><a href="https://yforster.github.io/files/talk-chocola-synthetic-computability.pdf">Synthetic Computability (Yannick Forster)</a><br /></li>
 <li><a id="orgc6d22f4"></a><a href="https://mathweb.ucsd.edu/~sbuss/ResearchWeb/BAthesis/Buss_Thesis_OCR.pdf">Bounded Arithmetic (Sam Buss)</a><br /></li>
@@ -345,7 +352,7 @@ compared to OCaml (the language of CAS CS 320)</li>
 </ul></li>
 <li>Reading:
 <ul class="org-ul">
-<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">Programming and Proving in Agda (PPA) 1: An introduction to Agda</a></li>
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 1: An introduction to Agda</a></li>
 </ul></li>
 </ul>
 </div>
@@ -355,8 +362,8 @@ compared to OCaml (the language of CAS CS 320)</li>
 <div class="outline-text-3" id="text-lean-ii">
 </div>
 <ul class="org-ul">
-<li><a id="orgf993370"></a>Summary:<br />
-<div class="outline-text-4" id="text-orgf993370">
+<li><a id="org96e97e9"></a>Summary:<br />
+<div class="outline-text-4" id="text-org96e97e9">
 <ul class="org-ul">
 <li>play with dependent types, with the goal of seeing some of their
 strangeness, not necessarily understanding how they work</li>
@@ -365,8 +372,8 @@ strangeness, not necessarily understanding how they work</li>
 </ul>
 </div>
 </li>
-<li><a id="orgaa969a6"></a>Reading:<br />
-<div class="outline-text-4" id="text-orgaa969a6">
+<li><a id="orgf329e44"></a>Reading:<br />
+<div class="outline-text-4" id="text-orgf329e44">
 <ul class="org-ul">
 <li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 2: Dependent Types</a></li>
 </ul>
@@ -379,8 +386,8 @@ strangeness, not necessarily understanding how they work</li>
 <div class="outline-text-3" id="text-prop-logic">
 </div>
 <ul class="org-ul">
-<li><a id="org50caf24"></a>Summary:<br />
-<div class="outline-text-4" id="text-org50caf24">
+<li><a id="org8d11ff2"></a>Summary:<br />
+<div class="outline-text-4" id="text-org8d11ff2">
 <ul class="org-ul">
 <li>discuss in more detail the standard workflow of Agda</li>
 <li>introduce the syntax and semantics of propositional logic (as well
@@ -390,17 +397,25 @@ propositional logic</li>
 </ul>
 </div>
 </li>
-<li><a id="org9b58595"></a>Reading:<br />
+<li><a id="orgad505dc"></a>Reading:<br />
 <ul class="org-ul">
-<li><a id="org1b39bdf"></a><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a><br />
+<li><a id="org748b3ad"></a>Required:<br />
+<ul class="org-ul">
+<li><a id="org0402025"></a><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a><br />
 <ul class="org-ul">
 <li><a id="org13dcd78"></a>4.1: Syntax<br /></li>
 <li><a id="orgcbd9cc2"></a>4.2: Semantics<br /></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a id="orgea05c72"></a>Supplementary:<br />
+<ul class="org-ul">
 <li><a id="org8e1dac5"></a><a href="https://nmmull.gitbook.io/cmsc-10500/notes/logic">A Primer on Propositional Logic</a><br /></li>
 <li><a id="org2275fe6"></a><a href="http://intrologic.stanford.edu/chapters/chapter_02.html">Propositional Logic</a><br /></li>
-<li><a id="org54bd1b9"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+<li><a id="org79fcf26"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -410,25 +425,33 @@ propositional logic</li>
 <div class="outline-text-3" id="text-prop-logic-ii">
 </div>
 <ul class="org-ul">
-<li><a id="orge0c873f"></a>Summary:<br />
-<div class="outline-text-4" id="text-orge0c873f">
+<li><a id="orgfeff075"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgfeff075">
 <ul class="org-ul">
-<li>Dive deeper into pattern matching in Agda, introducing
+<li>dive deeper into pattern matching in Agda, introducing
 with-abstraction for pattern matching on intermediate computations</li>
-<li>Introduce semantic notions in logic, particularly up to the notion of
+<li>introduce semantic notions in logic, particularly up to the notion of
 logical equivalence</li>
 </ul>
 </div>
 </li>
-<li><a id="org50689ca"></a>Reading:<br />
+<li><a id="org33f4a06"></a>Reading:<br />
 <ul class="org-ul">
-<li><a id="orge8a120c"></a><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a><br />
+<li><a id="org72f3190"></a>Required:<br />
+<ul class="org-ul">
+<li><a id="orga33b516"></a><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a><br />
 <ul class="org-ul">
 <li><a id="org50bf584"></a>4.3: Meta-Theory<br /></li>
 <li><a id="orge85f63d"></a>4.4: Functional Completeness<br /></li>
 </ul>
 </li>
-<li><a id="orgbc9af5a"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+</ul>
+</li>
+<li><a id="org87bf0b5"></a>Supplementary:<br />
+<ul class="org-ul">
+<li><a id="orgb3ec444"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -438,26 +461,41 @@ logical equivalence</li>
 <div class="outline-text-3" id="text-sat-i">
 </div>
 <ul class="org-ul">
-<li><a id="org8642eac"></a>Summary:<br />
-<div class="outline-text-4" id="text-org8642eac">
+<li><a id="orgdf6dfe4"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgdf6dfe4">
 <ul class="org-ul">
-<li>Finish discussing semantics notions in propositional logic</li>
-<li>Talk about functional completeness and normal forms</li>
-<li>Introduce SAT solvers and the DPLL procedure</li>
+<li>finish discussing semantics notions in propositional logic</li>
+<li>talk about functional completeness and normal forms</li>
+<li>introduce SAT solvers and the DPLL procedure</li>
 </ul>
 </div>
 </li>
-<li><a id="org32ba9f1"></a>Reading:<br />
-<div class="outline-text-4" id="text-org32ba9f1">
+<li><a id="org66d24d1"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org3025f0b"></a>Required:<br />
+<div class="outline-text-5" id="text-org3025f0b">
 <ul class="org-ul">
 <li><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a>
 <ul class="org-ul">
 <li>4.5: Conjunctive Normal Form</li>
 </ul></li>
+<li><a href="Notes/course-notes.pdf">TTMR 5: SAT Solvers</a>
+<ul class="org-ul">
+<li>5.1: Restriction</li>
+<li>5.2: DPLL</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc5cda42"></a>Supplementary:<br />
+<div class="outline-text-5" id="text-orgc5cda42">
+<ul class="org-ul">
 <li><a href="https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule">LAMR 6.2: Unit Propagation and the Pure Literal Rule</a></li>
 <li><a href="https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#dpll">LAMR 6.3: DPLL</a></li>
 </ul>
 </div>
+</li>
+</ul>
 </li>
 </ul>
 </div>
@@ -466,20 +504,35 @@ logical equivalence</li>
 <div class="outline-text-3" id="text-sat-ii">
 </div>
 <ul class="org-ul">
-<li><a id="org14d0dd0"></a>Summary:<br />
-<div class="outline-text-4" id="text-org14d0dd0">
+<li><a id="org41e781a"></a>Summary:<br />
+<div class="outline-text-4" id="text-org41e781a">
 <ul class="org-ul">
-<li>Look at a couple encodings of propositions as CNF formulas</li>
-<li>Look at an example application of SAT-solvers</li>
+<li>look at a couple encodings of propositions as CNF formulas</li>
+<li>look at an example application of SAT-solvers</li>
 </ul>
 </div>
 </li>
-<li><a id="orgee040fa"></a>Reading:<br />
-<div class="outline-text-4" id="text-orgee040fa">
+<li><a id="org87605ea"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org2e7d189"></a>Required:<br />
+<div class="outline-text-5" id="text-org2e7d189">
+<ul class="org-ul">
+<li><a href="Notes/course-notes.pdf">TTMR 5: SAT Solvers</a>
+<ul class="org-ul">
+<li>5.3 CNF Encodings</li>
+<li>5.4 Example: Sudoku</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org0899390"></a>Supplementary:<br />
+<div class="outline-text-5" id="text-org0899390">
 <ul class="org-ul">
 <li><a href="https://avigad.github.io/lamr/using_sat_solvers.html#">LAMR 7: Using SAT Solvers</a></li>
 </ul>
 </div>
+</li>
+</ul>
 </li>
 </ul>
 </div>
@@ -488,17 +541,17 @@ logical equivalence</li>
 <div class="outline-text-3" id="text-prop-proof">
 </div>
 <ul class="org-ul">
-<li><a id="orgce810af"></a>Summary:<br />
-<div class="outline-text-4" id="text-orgce810af">
+<li><a id="org7e92b29"></a>Summary:<br />
+<div class="outline-text-4" id="text-org7e92b29">
 <ul class="org-ul">
-<li>Define the notion of a proof system and a Gentzen-style sequent proof</li>
-<li>Introduce resolution as an example of a proof system</li>
-<li>Demonstrate the connection between resolution and DPLL.</li>
+<li>define the notion of a proof system and a Gentzen-style sequent proof</li>
+<li>introduce resolution as an example of a proof system</li>
+<li>demonstrate the connection between resolution and DPLL.</li>
 </ul>
 </div>
 </li>
-<li><a id="orgfdcb94e"></a>Reading:<br />
-<div class="outline-text-4" id="text-orgfdcb94e">
+<li><a id="org6dd84ea"></a>Reading:<br />
+<div class="outline-text-4" id="text-org6dd84ea">
 <ul class="org-ul">
 <li><a href="https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution">LAMR 8.2: Resolution</a></li>
 <li><a href="https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution-and-dpll">LAMR 8.4: Resolution and DPLL</a></li>
@@ -507,37 +560,22 @@ logical equivalence</li>
 </li>
 </ul>
 </div>
-<div id="outline-container-theories" class="outline-3">
-<h3 id="theories">Predicate Logic I: Theories and Models</h3>
-<div class="outline-text-3" id="text-theories">
-</div>
-</div>
-<div id="outline-container-smt" class="outline-3">
-<h3 id="smt">Predicate Logic II: SAT Modulo Theories (SMT)</h3>
-<div class="outline-text-3" id="text-smt">
-</div>
-</div>
-<div id="outline-container-int-prop-logic-i" class="outline-3">
-<h3 id="int-prop-logic-i">Intuitionistic Propositional Logic</h3>
-<div class="outline-text-3" id="text-int-prop-logic-i">
-</div>
-</div>
 <div id="outline-container-lambda-i" class="outline-3">
 <h3 id="lambda-i">The Lambda Calculus I: An Introduction</h3>
 <div class="outline-text-3" id="text-lambda-i">
 </div>
 <ul class="org-ul">
-<li><a id="orgef89eb0"></a>Summary:<br />
-<div class="outline-text-4" id="text-orgef89eb0">
+<li><a id="org7a37fb0"></a>Summary:<br />
+<div class="outline-text-4" id="text-org7a37fb0">
 <ul class="org-ul">
-<li>Introduce the syntax and semantics of the lambda calculus.</li>
+<li>introduce the syntax and semantics of the lambda calculus.</li>
 </ul>
 </div>
 </li>
-<li><a id="org1fccf04"></a>Reading:<br />
-<div class="outline-text-4" id="text-org1fccf04">
+<li><a id="org7beeb7d"></a>Reading:<br />
+<div class="outline-text-4" id="text-org7beeb7d">
 <ul class="org-ul">
-<li>TTFP 2: Functional Programming and Lambda-Calculi
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">TTFP 2: Functional Programming and Lambda-Calculi</a>
 <ul class="org-ul">
 <li>2.2: The untyped lambda-calculus</li>
 <li>2.3: Evaluation</li>
@@ -552,20 +590,20 @@ logical equivalence</li>
 <div class="outline-text-3" id="text-lambda-ii">
 </div>
 <ul class="org-ul">
-<li><a id="org9fdaffc"></a>Summary:<br />
-<div class="outline-text-4" id="text-org9fdaffc">
+<li><a id="org88bfc81"></a>Summary:<br />
+<div class="outline-text-4" id="text-org88bfc81">
 <ul class="org-ul">
-<li>Introduce semantic notions of the lambda calculus, including
+<li>introduce semantic notions of the lambda calculus, including
 normalization and evaluation strategies.</li>
-<li>Look at how to encode data.</li>
-<li>Talk breifly about De Bruijn indices and alpha equivalence.</li>
+<li>look at how to encode data.</li>
+<li>talk breifly about De Bruijn indices and alpha equivalence.</li>
 </ul>
 </div>
 </li>
-<li><a id="org4676dbc"></a>Reading:<br />
-<div class="outline-text-4" id="text-org4676dbc">
+<li><a id="org02b4c52"></a>Reading:<br />
+<div class="outline-text-4" id="text-org02b4c52">
 <ul class="org-ul">
-<li>TTFP 2: Functional Programming and Lambda-Calculi
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">TTFP 2: Functional Programming and Lambda-Calculi</a>
 <ul class="org-ul">
 <li>2.4: Convertibility</li>
 <li>2.5: Expressiveness</li>
@@ -603,6 +641,21 @@ normalization and evaluation strategies.</li>
 <div id="outline-container-type-inf" class="outline-3">
 <h3 id="type-inf">Type inference</h3>
 <div class="outline-text-3" id="text-type-inf">
+</div>
+</div>
+<div id="outline-container-theories" class="outline-3">
+<h3 id="theories">Predicate Logic I: Theories and Models</h3>
+<div class="outline-text-3" id="text-theories">
+</div>
+</div>
+<div id="outline-container-smt" class="outline-3">
+<h3 id="smt">Predicate Logic II: SAT Modulo Theories (SMT)</h3>
+<div class="outline-text-3" id="text-smt">
+</div>
+</div>
+<div id="outline-container-int-prop-logic-i" class="outline-3">
+<h3 id="int-prop-logic-i">Intuitionistic Propositional Logic</h3>
+<div class="outline-text-3" id="text-int-prop-logic-i">
 </div>
 </div>
 <div id="outline-container-hol" class="outline-3">
