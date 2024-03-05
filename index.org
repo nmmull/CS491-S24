@@ -239,11 +239,19 @@ students (you) with the tools to:
 + [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][TTFP 2: Functional Programming and Lambda-Calculi]]
   + 2.4: Convertibility
   + 2.5: Expressiveness
-** Simple types I
+** Simple Types I: An Introduction
 :PROPERTIES:
 :CUSTOM_ID: simple-types-i
 :END:
-** Simple types II
+*** Summary:
++ introduce the simply typed lambda calculus (STLC)
++ give an outline of the proof that STLC is strongly normalizing
+*** Reading:
++ [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][TTFP 2: Function Programming and Lambda-Calculi]]
+  + 2.6: Typed lambda-calculus
+  + 2.7: Strong normalization
++ [[https://people.mpi-sws.org/~dg/teaching/pt2012/sn.pdf][Strong Normalization for Simply Typed Lambda Calculus (Notes)]]
+** Simple Types II: The Curry-Howard Isomorphism
 :PROPERTIES:
 :CUSTOM_ID: simple-types-ii
 :END:
