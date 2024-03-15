@@ -1,18 +1,5 @@
 open import CS400-Lib
 
-{-
-
-In this assignment, you will be filling in an Agda definition of
-resolution proofs.  We'll use the "IsTrue" trick that we talked about
-in class to design resolution proofs as ADTs.
-
-REMINDER: Please pull down the most recent changes to CS400-Lib, or
-use the included copy of the file by changing the above line to:
-
-open import CS400-Lib-Copy
-
--}
-
 -- Variables are represented as natural numbers
 Var : Set
 Var = Nat
@@ -41,7 +28,7 @@ CNF = List Cls
 
 -- These are Boolean comparison functions for literals and clauses
 eq-lit : Lit -> Lit -> Bool
-eq-lit (x , b) (y , c) = (x == y) && (b ==b c)
+eq-lit (x , b) (y , c) = (x =N y) && (b =B c)
 
 eq-cls : Cls -> Cls -> Bool
 eq-cls [] [] = true

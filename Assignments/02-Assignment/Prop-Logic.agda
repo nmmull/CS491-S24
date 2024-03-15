@@ -99,8 +99,8 @@ module Tautology where
   isTautology = {!!}
 
   data IsTautology {n : Nat} (f : Form n) : Set where
-    yes : {isTrue (isTautology f)} → IsTautology f
-    no : (v : Val n) -> {isFalse (eval v f)} -> IsTautology f
+    yes : {IsTrue (isTautology f)} → IsTautology f
+    no : (v : Val n) -> {IsFalse (eval v f)} -> IsTautology f
 
   a : PropVar 2
   a = zero
