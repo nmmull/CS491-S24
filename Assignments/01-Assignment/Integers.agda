@@ -7,7 +7,7 @@ programming language by building a small interface for integers.
 
 In this exercise, we are imagining that we are building a calculator
 for integers in Agda.  This means we have to write an abstract
-representation of an integer, as well as an abstract representation
+representation for integers, as well as an abstract representation
 for expressions we could type into our calculator.  The part we won't
 worry about (for now) is parsing.
 
