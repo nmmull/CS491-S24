@@ -255,6 +255,15 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: simple-types-ii
 :END:
+*** Summary:
++ finish the discussion of strong normalization
++ discuss data types in STLC
++ connect data types to the Curry-Howard isomorphism
+*** Reading:
++ [[https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/][TTFP 2: Function Programming and Lambda-Calculi]]
+  + 2.8: Further type constructors: the product
+  + 2.9: Base types: natural numbers
++ [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 3.1: The Curry-Howard correspondence: Propositional logic]]
 ** Agda III
 :PROPERTIES:
 :CUSTOM_ID: lean-iii
