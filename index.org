@@ -274,10 +274,16 @@ students (you) with the tools to:
   translate mathematics into Agda
 *** Reading:
 + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 3: The Curry-Howard correspondence (whole chapter)]]
-** Agda IV
+** Agda IV: Equational Reasoning
 :PROPERTIES:
 :CUSTOM_ID: lean-iv
 :END:
+*** Summary:
++ discuss how to prove complex equalities in Agda
++ see many examples in code
+*** Reading:
++ [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 4: Equational reasoning in Agda]] (note: we use different syntax,
+  but the ideas transfer)
 ** Polymorphism
 :PROPERTIES:
 :CUSTOM_ID: poly
