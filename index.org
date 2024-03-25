@@ -67,7 +67,7 @@ students (you) with the tools to:
 | 03-18 | [[#lean-iii]]                   |                        |
 | 03-20 | [[#lean-iv]]                    | HW06 out, proposal due |
 |-------+-----------------------------+------------------------|
-| 03-25 | [[#poly]]                       |                        |
+| 03-25 | [[#case-study-i]]               |                        |
 | 03-27 | [[#type-inf]]                   | HW06 due, HW07 out     |
 |-------+-----------------------------+------------------------|
 | 04-01 | [[#hol]]                        |                        |
@@ -284,6 +284,15 @@ students (you) with the tools to:
 *** Reading:
 + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 4: Equational reasoning in Agda]] (note: we use different syntax,
   but the ideas transfer)
+** Case Study I: STLC in Agda
+:PROPERTIES:
+:CUSTOM_ID: case-study-i
+:END:
+*** Summary:
++ see how to formalize the simply typed lambda calculus in Agda
++ prove several meta-theoretic lemmas, leading to type preservation
+*** Reading:
++ look through the code from lecture
 ** Polymorphism
 :PROPERTIES:
 :CUSTOM_ID: poly
