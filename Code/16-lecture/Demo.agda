@@ -14,7 +14,17 @@ open import CS400-Lib
 
 -}
 
--- TODO
+infixr 10 _=>_
+
+data Ty : Set where
+  B : Ty
+  _=>_ : Ty -> Ty -> Ty
+
+ex-ty : Ty
+ex-ty = (B => B) => (B => B)
+
+ex-ty-2 : Ty
+ex-ty-2 = B => B => B
 
 {- Contexts
 
@@ -28,7 +38,8 @@ open import CS400-Lib
 
 -}
 
--- TODO
+Cxt : Nat -> Set
+Cxt n = Vec Ty n
 
 {- λ-Terms
 
@@ -49,29 +60,32 @@ open import CS400-Lib
 
 -}
 
--- TODO
+data Tm : Nat -> Set where
+  v[_] : {n : Nat} -> Fin n -> Tm n
+  lam : {n : Nat} -> Tm (suc n) -> Tm n
+  app : {n : Nat} -> Tm n -> Tm n -> Tm n
 
 {- Examples -}
 
--- -- standard:   λ x . x
--- -- De Bruijn:  λ 𝐯₀
--- i : Tm 0
--- i = lam v[ zero ]
+-- standard:   λ x . x
+-- De Bruijn:  λ 𝐯₀ === λ 0
+i : Tm 0
+i = lam v[ zero ]
 
--- -- standard:   λ x . λ y . x
--- -- De Bruijn:  λ (λ 𝐯₁)
--- k : Tm 0
--- k = lam (lam v[ suc zero ])
+-- standard:   λ x . λ y . x
+-- De Bruijn:  λ (λ 𝐯₁) === λ (λ 1)
+k : Tm 0
+k = lam (lam v[ suc zero ])
 
--- -- standard:   λ x . y
--- -- De Bruijn:  λ 𝐯₁
--- t : Tm 1
--- t = lam v[ suc zero ]
+-- standard:   λ x . y
+-- De Bruijn:  λ 𝐯₁ === λ 1
+t : Tm 1
+t = lam v[ suc zero ]
 
--- -- standard:   λ f . λ x . f x
--- -- De Bruijn:  λ (λ (𝐯₁ 𝐯₀))
--- a : Tm 0
--- a = lam (lam (app v[ suc zero ] v[ zero ]))
+-- standard:   λ f . λ x . f x
+-- De Bruijn:  λ (λ (𝐯₁ 𝐯₀))
+a : Tm 0
+a = lam (lam (app v[ suc zero ] v[ zero ]))
 
 {-  Typing Judgments
 
@@ -106,23 +120,54 @@ open import CS400-Lib
 
 -}
 
--- TODO
+infix 5 _|-_is-type_
+
+data _|-_is-type_ : {n : Nat} -> Cxt n -> Tm n -> Ty -> Set where
+  start :
+    {n : Nat} ->
+    {gamma : Cxt n} ->
+    {i : Fin n} ->
+
+    --------------------------------------------------
+    gamma |- v[ i ] is-type lookupV gamma i
+
+  abst :
+    {n : Nat} ->
+    {gamma : Cxt n} ->
+    {m : Tm (suc n)} ->
+    {a b : Ty} ->
+
+    (a :: gamma) |- m is-type b ->
+    --------------------------------------------------
+    gamma |- (lam m) is-type (a => b)
+
+  app :
+    {n : Nat} ->
+    {gamma : Cxt n} ->
+    {m n : Tm n} ->
+    {a b : Ty} ->
+
+    gamma |- m         is-type a => b ->
+    gamma |- n         is-type a      ->
+    --------------------------------------------------
+    gamma |- (app m n) is-type b
+
 
 {- Examples -}
 
--- {- A Derivation of the K-combinator
+{- A Derivation of the K-combinator
 
---    (SRT) -----------------------
---          𝐯₀ : ⊥ , 𝐯₁ : ⊥ ⊢ 𝐯₀ ⊥
---    (ABS) -----------------------
---          𝐯₀ : ⊥ ⊢ λ 𝐯₁ : ⊥ ⇒ ⊥
---    (ABS) -----------------------
---          ⊢ λ (λ 𝐯₁) : ⊥ ⇒ ⊥ ⇒ ⊥
+   (SRT) -----------------------
+         𝐯₀ : ⊥ , 𝐯₁ : ⊥ ⊢ 𝐯₀ ⊥
+   (ABS) -----------------------
+         𝐯₀ : ⊥ ⊢ λ 𝐯₁ : ⊥ ⇒ ⊥
+   (ABS) -----------------------
+         ⊢ λ (λ 𝐯₁) : ⊥ ⇒ ⊥ ⇒ ⊥
 
--- -}
+-}
 
--- derive-k : [] |- k is-type (B => B => B)
--- derive-k = abst (abst start)
+derive-k : [] |- (lam (lam v[ suc zero ])) is-type (B => (B => B) => B)
+derive-k = abst (abst start)
 
 -- {- A Derivation of the Constant Function
 
@@ -133,8 +178,8 @@ open import CS400-Lib
 
 -- -}
 
--- derive-t : (B => B :: []) |- lam v[ suc zero ] is-type (B => B => B)
--- derive-t = abst start
+derive-t : (B => B :: []) |- lam v[ suc zero ] is-type (B => B => B)
+derive-t = abst start
 
 {- Shifting Terms
 
@@ -152,10 +197,10 @@ open import CS400-Lib
 
 -}
 
--- shiftTm : {n : Nat} -> (m p : Nat) -> Tm (m + n) -> Tm (m + (p + n))
--- shiftTm m p v[ x ] = v[ shiftF m p x ]
--- shiftTm m p (lam t) = lam (shiftTm (suc m) p t)
--- shiftTm m p (app f arg) = app (shiftTm m p f) (shiftTm m p arg)
+shiftTm : {n : Nat} -> (m p : Nat) -> Tm (m + n) -> Tm (m + (p + n))
+shiftTm m p v[ x ] = v[ shiftF m p x ]
+shiftTm m p (lam t) = lam (shiftTm (suc m) p t)
+shiftTm m p (app f arg) = app (shiftTm m p f) (shiftTm m p arg)
 
 {- Thinning lemma
 
@@ -175,7 +220,22 @@ open import CS400-Lib
 
 -}
 
--- TODO
+thinning-lemma :
+  {m n : Nat} ->
+  {delta : Cxt m} ->
+  {gamma : Cxt n} ->
+  {tm : Tm (m + n)} ->
+  {a b : Ty} ->
+
+  (delta ++V gamma)        |- tm             is-type a ->
+  --------------------------------------------------
+  (delta ++V (b :: gamma)) |- shiftTm m 1 tm is-type a
+
+thinning-lemma start = {!!}
+thinning-lemma {delta = delta} {gamma = gamma} {a = a} (abst deriv) =
+  abst {!thinning-lemma {delta = a :: delta} {gamma = gamma} deriv!}
+thinning-lemma (app m-deriv n-deriv) =
+  app (thinning-lemma m-deriv) (thinning-lemma n-deriv)
 
 {- Substitution
 
