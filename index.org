@@ -44,8 +44,8 @@ students (you) with the tools to:
 | 01-22 | [[#course-intro]]                            |                        |
 | 01-24 | [[#ind-rec]]                                 | HW00 out               |
 |-------+------------------------------------------+------------------------|
-| 01-29 | [[#lean-i]]                                  |                        |
-| 02-01 | [[#lean-ii]]                                 | HW01 out               |
+| 01-29 | [[#agda-i]]                                  |                        |
+| 02-01 | [[#agda-ii]]                                 | HW01 out               |
 |-------+------------------------------------------+------------------------|
 | 02-05 | [[#prop-logic]]                              |                        |
 | 02-07 | [[#prop-logic-ii]]                           | HW01 due, HW02 out     |
@@ -60,27 +60,27 @@ students (you) with the tools to:
 | 02-28 | [[#lambda-ii]]                               | HW04 due, HW05 out     |
 |-------+------------------------------------------+------------------------|
 | 03-04 | [[#simple-types-i]]                          |                        |
-| 03-06 | [[#simple-types-ii]]                         | HW05 due               |
+| 03-06 | [[#simple-types-ii]]                         | HW05 due, proposal out |
 |-------+------------------------------------------+------------------------|
 |       | SPRING RECESS                            |                        |
 |-------+------------------------------------------+------------------------|
-| 03-18 | [[#lean-iii]]                                |                        |
-| 03-20 | [[#lean-iv]]                                 | HW07 out, proposal due |
+| 03-18 | [[#agda-iii]]                                |                        |
+| 03-20 | [[#agda-iv]]                                 | proposal due, HW07 out |
 |-------+------------------------------------------+------------------------|
 | 03-25 | [[#case-study-i]]                            |                        |
 | 03-27 | [[#case-study-ii]]                           | HW07 due, HW08 out     |
 |-------+------------------------------------------+------------------------|
-| 04-01 | [[#hol]]                                     |                        |
-| 04-03 | [[#dtt]]                                     | HW08 due, HW09 out     |
+| 04-01 | [[#int-logic-i]]                             |                        |
+| 04-03 | [[#int-logic-ii]]                            | HW08 due, HW09 out     |
 |-------+------------------------------------------+------------------------|
-| 04-08 | [[#lambda-cube]]                             |                        |
-| 04-10 | [[#curry-howard]]                            | HW09 due, HW10 out     |
+| 04-08 | [[#poly-i]]                                  |                        |
+| 04-10 | [[#poly-ii]]                                 | HW09 due, HW10 out     |
 |-------+------------------------------------------+------------------------|
 | 04-15 | NO CLASS                                 | Patriots’ Day          |
-| 04-17 | [[#real-world]]                              | HW10 due               |
+| 04-17 | [[#dtt-i]]                                   | HW10 due               |
 |-------+------------------------------------------+------------------------|
 | 04-22 | [[https://www.bu.edu/cphs/colloquium/mathematics-with-a-human-face/][Mathematics with a Human Face]] (NO CLASS) | Attend for Ex. Credit  |
-| 04-24 | [[#extensions]]                              |                        |
+| 04-24 | [[#dtt-ii]]                                  |                        |
 |-------+------------------------------------------+------------------------|
 | 04-29 | [[#paradox]]                                 |                        |
 | 05-01 | Final Project Presentations              |                        |
@@ -119,7 +119,7 @@ students (you) with the tools to:
 ***** [[https://en.wikipedia.org/wiki/Transfinite_induction][Transfinite Induction (Wikipedia)]]
 ** Agda I: An Introduction
 :PROPERTIES:
-:CUSTOM_ID: lean-i
+:CUSTOM_ID: agda-i
 :END:
 + Summary:
   + examine at Agda as a function programming language, especially as
@@ -129,7 +129,7 @@ students (you) with the tools to:
   + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 1: An introduction to Agda]]
 ** Agda II: Dependent Types
 :PROPERTIES:
-:CUSTOM_ID: lean-ii
+:CUSTOM_ID: agda-ii
 :END:
 *** Summary:
 + play with dependent types, with the goal of seeing some of their
@@ -266,7 +266,7 @@ students (you) with the tools to:
 + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 3.1: The Curry-Howard correspondence: Propositional logic]]
 ** Agda III: The Proof Assistant
 :PROPERTIES:
-:CUSTOM_ID: lean-iii
+:CUSTOM_ID: agda-iii
 :END:
 *** Summary:
 + recall the Curry-Howard isomorphism and see how it applies to Agda
@@ -276,7 +276,7 @@ students (you) with the tools to:
 + [[https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf][PPA 3: The Curry-Howard correspondence (whole chapter)]]
 ** Agda IV: Equational Reasoning
 :PROPERTIES:
-:CUSTOM_ID: lean-iv
+:CUSTOM_ID: agda-iv
 :END:
 *** Summary:
 + discuss how to prove complex equalities in Agda
@@ -303,51 +303,63 @@ students (you) with the tools to:
   properties are proved about it
 *** Reading:
 + look through the code from lecture
-** Polymorphism
+** Intuitionistic Logic I: An introduction
 :PROPERTIES:
-:CUSTOM_ID: poly
+:CUSTOM_ID: int-logic-i
 :END:
-** Type inference
+** Intuitionistic Logic II: Kripke Semantics
 :PROPERTIES:
-:CUSTOM_ID: type-inf
+:CUSTOM_ID: int-logic-ii
 :END:
-** Predicate Logic I: Theories and Models
+** Polymorphism I: In Introduction
 :PROPERTIES:
-:CUSTOM_ID: theories
+:CUSTOM_ID: poly-i
 :END:
-** Predicate Logic II: SAT Modulo Theories (SMT)
+** Polymorphism II: Type Inference
 :PROPERTIES:
-:CUSTOM_ID: smt
+:CUSTOM_ID: poly-ii
 :END:
-** Intuitionistic Propositional Logic
+** Dependent type theory I: An introduction
 :PROPERTIES:
-:CUSTOM_ID: int-prop-logic-i
+:CUSTOM_ID: dtt-i
 :END:
-** Quantifiers and higher-order logic
+** Dependent type theory II: Meta-Theory
 :PROPERTIES:
-:CUSTOM_ID: hol
-:END:
-** Dependent type theory
-:PROPERTIES:
-:CUSTOM_ID: dtt
-:END:
-** The Curry-Howard isomorphism
-:PROPERTIES:
-:CUSTOM_ID: curry-howard
-:END:
-** The lambda cube
-:PROPERTIES:
-:CUSTOM_ID: lambda-cube
-:END:
-** Advanced: Real world mechanized proving
-:PROPERTIES:
-:CUSTOM_ID: real-world
-:END:
-** Advanced: Extensions of type theory
-:PROPERTIES:
-:CUSTOM_ID: extensions
+:CUSTOM_ID: dtt-ii
 :END:
 ** Advanced: Type-theoretic paradoxes
 :PROPERTIES:
 :CUSTOM_ID: paradox
+:END:
+** TODO Advanced: Real world mechanized proving
+:PROPERTIES:
+:CUSTOM_ID: real-world
+:END:
+** TODO The Curry-Howard isomorphism
+:PROPERTIES:
+:CUSTOM_ID: curry-howard
+:END:
+** TODO Advanced: The lambda cube
+:PROPERTIES:
+:CUSTOM_ID: lambda-cube
+:END:
+** TODO Predicate Logic I: Theories and Models
+:PROPERTIES:
+:CUSTOM_ID: theories
+:END:
+** TODO Predicate Logic II: SAT Modulo Theories (SMT)
+:PROPERTIES:
+:CUSTOM_ID: smt
+:END:
+** TODO Intuitionistic Propositional Logic
+:PROPERTIES:
+:CUSTOM_ID: int-prop-logic-i
+:END:
+** TODO Quantifiers and higher-order logic
+:PROPERTIES:
+:CUSTOM_ID: hol
+:END:
+** TODO Advanced: Extensions of type theory
+:PROPERTIES:
+:CUSTOM_ID: extensions
 :END:
