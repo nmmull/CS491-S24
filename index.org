@@ -298,8 +298,8 @@ students (you) with the tools to:
 :CUSTOM_ID: case-study-ii
 :END:
 *** Summary:
-+ Verify that (functional) insertion sort returns an ordered list
-+ See the connections between how the algorithm is written and how
++ verify that (functional) insertion sort returns an ordered list
++ see the connections between how the algorithm is written and how
   properties are proved about it
 *** Reading:
 + look through the code from lecture
@@ -307,6 +307,19 @@ students (you) with the tools to:
 :PROPERTIES:
 :CUSTOM_ID: int-logic-i
 :END:
+*** Summary:
++ introduce a proof system for intuitionistic propositional logic with
+  propositional variables (IPL) as the simply typed lambda calculus
+  with type variables with type variables (STLC) minus the
+  computational content
++ introduce a proof system for classical propositional logic (CPL) as
+  IPL plus a variant of proof by contradiction
++ look at classical principles which are not intuitionistically
+  provable
++ see what is gained by thinking intuitionistically (e.g., the
+  disjunction property)
+*** Reading:
++ none yet, working on it. Please look through the lecture notes.
 ** Intuitionistic Logic II: Kripke Semantics
 :PROPERTIES:
 :CUSTOM_ID: int-logic-ii
