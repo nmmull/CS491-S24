@@ -319,19 +319,40 @@ students (you) with the tools to:
 + see what is gained by thinking intuitionistically (e.g., the
   disjunction property)
 *** Reading:
-+ none yet, working on it. Please look through the lecture notes.
++ please look through the lecture slides
 ** Intuitionistic Logic II: Kripke Semantics
 :PROPERTIES:
 :CUSTOM_ID: int-logic-ii
 :END:
+*** Summary:
++ recall the notions of soundness and completeness
++ note that IPL is not complete with respect to valuations
++ present Kripke models as an alternative semantics for which IPL is
+  sound and complete
++ use Kripke countermodels to prove that some classical principles
+  cannot be proved in IPL
+*** Reading:
++ please look through the lecture slides
 ** Polymorphism I: In Introduction
 :PROPERTIES:
 :CUSTOM_ID: poly-i
 :END:
-** Polymorphism II: Type Inference
+*** Summary:
++ look generally the notion of polymorphism
++ introduce System F as a typed lambda calculi with polymorphism
++ discuss briefly the role of type annotations in type checking and
+  type inference
+*** Reading:
++ please look through the lecture slides
+** Polymorphism II: Logic in System F
 :PROPERTIES:
 :CUSTOM_ID: poly-ii
 :END:
+*** Summary:
++ recap System F
++ look at how to represent logical connectives in System F
++ briefly discuss unification, implicit variables, and the type
+  inference problem
 ** Dependent type theory I: An introduction
 :PROPERTIES:
 :CUSTOM_ID: dtt-i
