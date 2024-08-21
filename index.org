@@ -2,7 +2,8 @@
 #+subtitle: Type Theory and Mechanized Reasoning@@html:<br>@@
 #+subtitle: Boston University@@html:<br>@@
 #+subtitle: Spring 2024
-#+options: H:2
+#+OPTIONS: html-style:nil H:2 toc:nil num:nil
+#+HTML_LINK_HOME: http://nmmull.github.io
 This course is an introduction to basic concepts in type theory and
 mechanized proof as they relate to programming languages, formal
 verification, mathematics, and philosophy. We will only be able to
